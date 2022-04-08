@@ -10,6 +10,10 @@ For a full history of changes go to [base.store's CHANGELOG](https://github.com/
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix cms webhook url.
+
 ### Added
 
 ### Changed
