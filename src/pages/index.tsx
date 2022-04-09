@@ -7,6 +7,7 @@ import { mark } from 'src/sdk/tests/mark'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
 import VirtualConsultant from 'src/components/sections/VirtualConsultant'
+import Hero from 'src/components/sections/Hero'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -143,6 +144,16 @@ function Page(props: Props) {
             'query-input': 'required name=search_term_string',
           },
         }}
+      />
+      <Hero
+        title="Lorem Ipsum Dolor Sit Amet, Consectetur"
+        subtitle="Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis ex, quis dictum arcu arcu nec orci. Praesent rutrum mattis nisi."
+        mainLink="/"
+        mainLinkText="ver todos"
+        secondaryLink="/"
+        secondaryLinkText="encontre o presente ideal"
+        imageAlt="oi"
+        imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
       />
       <VirtualConsultant filterValues={virtualConsultantJson}>
         <h3>Lorem ipsum dolor sit amet, consectetur</h3>
