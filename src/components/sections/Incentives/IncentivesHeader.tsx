@@ -2,12 +2,11 @@ import React from 'react'
 import Icon from 'src/components/ui/Icon'
 
 import Incentives from './Incentives'
-import Section from '../Section'
 
 const incentives = [
   {
     icon: <Icon name="Truck" width={32} height={32} />,
-    title: 'Buy online',
+    title: 'FRN Cubo',
     firstLineText: 'Get Free Shipping',
   },
   {
@@ -32,11 +31,21 @@ const incentives = [
   },
 ]
 
+const carousel = {
+  controls: 'navigationArrows',
+  transition: {
+    duration: 400,
+    property: 'transform',
+  },
+}
+
 function IncentivesHeader() {
   return (
-    <Section>
-      <Incentives incentives={incentives} classes="incentives--colored" />
-    </Section>
+    <Incentives
+      incentives={incentives}
+      carouselProps={carousel}
+      classes="incentives--colored incentives--header"
+    />
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import Alert from 'src/components/common/Alert'
+import IncentivesHeader from 'src/components/sections/Incentives/IncentivesHeader'
 import Footer from 'src/components/common/Footer'
 import Navbar from 'src/components/common/Navbar'
 import Toast from 'src/components/common/Toast'
@@ -13,9 +13,7 @@ function Layout({ children }: PropsWithChildren<unknown>) {
 
   return (
     <div id="layout">
-      <Alert>
-        Get 10% off today:&nbsp;<span>NEW10</span>
-      </Alert>
+      <IncentivesHeader />
 
       <Navbar />
 
