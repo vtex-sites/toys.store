@@ -8,6 +8,7 @@ import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
 import VirtualConsultant from 'src/components/sections/VirtualConsultant'
 import Hero from 'src/components/sections/Hero'
+import Skills from 'src/components/sections/Skills'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -106,6 +107,15 @@ const virtualConsultantJson = [
   },
 ]
 
+const skillsArray = [
+  'lorem ipsum dolor',
+  'sit amet',
+  'lorem ipsum',
+  'sit amet',
+  'lorem ipsum',
+  'lorem ipsum dolor',
+]
+
 function Page(props: Props) {
   const {
     data: { site, cmsHome },
@@ -162,6 +172,16 @@ function Page(props: Props) {
           ex, quis dictum
         </p>
       </VirtualConsultant>
+      <Skills skills={skillsArray}>
+        <h3>
+          Brincar também é um jeito de
+          <span className="lastWord"> aprender</span>
+        </h3>
+        <p>
+          Escolha brinquedos baseados nas habilidades que eles ajudam sua
+          criança a desenvolver!
+        </p>
+      </Skills>
       {/* CMS Sections */}
       <RenderCMS sections={cmsHome?.sections ?? fallbackContent} />
     </>
