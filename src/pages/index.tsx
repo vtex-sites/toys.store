@@ -6,6 +6,7 @@ import RenderCMS from 'src/components/RenderCMS'
 import { mark } from 'src/sdk/tests/mark'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
+import VirtualConsultant from 'src/components/sections/VirtualConsultant'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -28,6 +29,79 @@ const fallbackContent = [
       imageAlt: 'Quest 2 Controller on a table',
     },
     name: 'Hero',
+  },
+]
+
+const virtualConsultantJson = [
+  {
+    title: 'Idade',
+    optionsValue: [
+      {
+        title: '0-2 anos',
+        values: '0-2 anos',
+        maps: 'specificationFilter_10',
+      },
+      {
+        title: '3-6 anos',
+        values: '3-6 anos',
+        maps: 'specificationFilter_10',
+      },
+      {
+        title: '7-10 anos',
+        values: '7-10 anos',
+        maps: 'specificationFilter_10',
+      },
+      {
+        title: '+11 anos',
+        values: '+11 anos',
+        maps: 'specificationFilter_10',
+      },
+    ],
+  },
+  {
+    title: 'Gênero',
+    optionsValue: [
+      {
+        title: 'Menino',
+        values: 'Menino',
+        maps: 'specificationFilter_11',
+      },
+      {
+        title: 'Menina',
+        values: 'Menina',
+        maps: 'specificationFilter_11',
+      },
+      {
+        title: 'Para ambos',
+        values: 'Menino/Menina',
+        maps: 'specificationFilter_11,specificationFilter_11',
+      },
+    ],
+  },
+  {
+    title: 'Faixa de preço',
+    optionsValue: [
+      {
+        title: 'Até R$99,99',
+        values: 'ate-99-99',
+        maps: 'price',
+      },
+      {
+        title: 'De R$100,00 até R$299,99',
+        values: 'de-1000-ate-299-99',
+        maps: 'price',
+      },
+      {
+        title: 'De R$300,00 até R$999,99',
+        values: 'de-300-ate-999-99',
+        maps: 'price',
+      },
+      {
+        title: 'Acima de R$1.000,00',
+        values: 'acima-de-1000',
+        maps: 'price',
+      },
+    ],
   },
 ]
 
@@ -70,6 +144,13 @@ function Page(props: Props) {
           },
         }}
       />
+      <VirtualConsultant filterValues={virtualConsultantJson}>
+        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+        <p>
+          Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis
+          ex, quis dictum
+        </p>
+      </VirtualConsultant>
       {/* CMS Sections */}
       <RenderCMS sections={cmsHome?.sections ?? fallbackContent} />
     </>
