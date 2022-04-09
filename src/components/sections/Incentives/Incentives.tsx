@@ -7,8 +7,6 @@ import {
 import type { ReactNode } from 'react'
 import { Link, Link as LinkGatsby } from 'gatsby'
 
-import './incentives.scss'
-
 interface Incentive {
   icon: ReactNode
   title?: string
@@ -34,7 +32,7 @@ interface Props {
 function Incentives({ incentives, carouselProps, classes = '' }: Props) {
   return (
     <div className={`incentives ${classes} / grid-content-full`}>
-      <UIList variant="unordered">
+      <UIList variant="unordered" className="grid-content">
         {carouselProps ? (
           <>
             <Carousel
@@ -79,6 +77,17 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
                 </li>
               ))}
             </Carousel>
+            <div className="topLinks">
+              <Link className="topLinks__item" to="/about">
+                About
+              </Link>
+              <Link className="topLinks__item" to="/contact">
+                Contact
+              </Link>
+              <Link className="topLinks__item" to="/policies">
+                Policies
+              </Link>
+            </div>
           </>
         ) : (
           <>
@@ -119,17 +128,6 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
           </>
         )}
       </UIList>
-      <div className="topLinks">
-        <Link className="topLinks__item" to="/about">
-          About
-        </Link>
-        <Link className="topLinks__item" to="/contact">
-          Contact
-        </Link>
-        <Link className="topLinks__item" to="/policies">
-          Policies
-        </Link>
-      </div>
     </div>
   )
 }
