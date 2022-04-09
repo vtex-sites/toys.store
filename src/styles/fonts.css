@@ -42,3 +42,67 @@
     url("../fonts/lato-v20-latin-900.ttf") format("truetype"),
     url("../fonts/lato-v20-latin-900.svg#Lato") format("svg"); /* Legacy iOS */
 }
+
+
+/* Montserrat-Light - latin */
+@font-face {
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../fonts/Montserrat-Light.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/subset/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/subset/Montserrat-Light.woff") format("woff"),
+    url("../fonts/Montserrat-Light.ttf") format("truetype"),
+    url("../fonts/Montserrat-Light.svg#Lato") format("svg"); /* Legacy iOS */
+}
+
+
+/* Montserrat-Regular - latin */
+@font-face {
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../fonts/Montserrat-Regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/subset/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/subset/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("../fonts/Montserrat-Regular.svg#Lato") format("svg"); /* Legacy iOS */
+}
+
+
+/* Montserrat-SemiBold - latin */
+@font-face {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../fonts/Montserrat-SemiBold.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/subset/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/subset/Montserrat-SemiBold.woff") format("woff"),
+    url("../fonts/Montserrat-SemiBold.ttf") format("truetype"),
+    url("../fonts/Montserrat-SemiBold.svg#Lato") format("svg"); /* Legacy iOS */
+}
+
+
+/* Montserrat-ExtraBold - latin */
+@font-face {
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../fonts/Montserrat-ExtraBold.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/subset/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../fonts/subset/Montserrat-ExtraBold.woff") format("woff"),
+    url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Montserrat-ExtraBold.svg#Lato") format("svg"); /* Legacy iOS */
+}
