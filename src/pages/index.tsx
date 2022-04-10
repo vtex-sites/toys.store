@@ -10,6 +10,7 @@ import VirtualConsultant from 'src/components/sections/VirtualConsultant'
 import Hero from 'src/components/sections/Hero'
 import Skills from 'src/components/sections/Skills'
 import Newsletter from 'src/components/sections/Newsletter'
+import NewProducts from 'src/components/sections/NewProducts'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -173,6 +174,9 @@ function Page(props: Props) {
           ex, quis dictum
         </p>
       </VirtualConsultant>
+      <NewProducts>
+        <h3>Novidades</h3>
+      </NewProducts>
       <Skills skills={skillsArray}>
         <h3>
           Brincar também é um jeito de
