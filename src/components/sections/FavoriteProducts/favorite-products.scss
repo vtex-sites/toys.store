@@ -1,0 +1,62 @@
+.frn-favoriteProducts {
+  background: linear-gradient(267.21deg, rgb(51 48 86 / 0%) 0%, rgb(222 104 209 / 44%) 100%);
+  backdrop-filter: blur(14px);
+
+  &__grid-content {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--page-padding-notebook);
+    padding-bottom: var(--page-padding-notebook);
+  }
+
+  &__children {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 250px;
+    padding: 0;
+    margin-right: 57px;
+    text-align: left;
+
+    &-infos {
+      margin-bottom: 45px;
+    }
+
+    h3 {
+      flex: none;
+      flex-grow: 0;
+      order: 0;
+      font-size: 30px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 37px;
+      color: #ffffff;
+    }
+
+    p {
+      flex: none;
+      flex-grow: 0;
+      order: 1;
+      margin: 10px 0;
+      font-size: 16px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+
+  &__productShelf {
+    width: 100%;
+    height: 339px;
+    margin: 33px 0;
+    background: rgb(255 255 255 / 20%);
+    backdrop-filter: blur(14px);
+  }
+}

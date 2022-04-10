@@ -12,6 +12,7 @@ import Skills from 'src/components/sections/Skills'
 import Newsletter from 'src/components/sections/Newsletter'
 import NewProducts from 'src/components/sections/NewProducts'
 import BannerText from 'src/components/sections/BannerText'
+import FavoriteProducts from 'src/components/sections/FavoriteProducts'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -194,6 +195,7 @@ function Page(props: Props) {
           criança a desenvolver!
         </p>
       </Skills>
+      <FavoriteProducts />
       <Newsletter
         title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
         onSubmit={() => {}}
