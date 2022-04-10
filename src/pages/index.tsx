@@ -11,6 +11,7 @@ import Hero from 'src/components/sections/Hero'
 import Skills from 'src/components/sections/Skills'
 import Newsletter from 'src/components/sections/Newsletter'
 import NewProducts from 'src/components/sections/NewProducts'
+import BannerText from 'src/components/sections/BannerText'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -177,6 +178,12 @@ function Page(props: Props) {
       <NewProducts>
         <h3>Novidades</h3>
       </NewProducts>
+      <BannerText
+        title="Get to know our next realease"
+        caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."
+        actionPath="/"
+        actionLabel="call to action"
+      />
       <Skills skills={skillsArray}>
         <h3>
           Brincar também é um jeito de

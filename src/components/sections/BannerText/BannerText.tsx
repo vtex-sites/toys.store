@@ -6,24 +6,9 @@ import type { InputHTMLAttributes } from 'react'
 import Section from '../Section'
 
 export interface BannerTextProps extends InputHTMLAttributes<HTMLDivElement> {
-  /**
-   * The content for the h2 tag.
-   */
   title: string
-
-  /**
-   * The content for the p tag below the h2.
-   */
   caption: string
-
-  /**
-   * The href used at the link
-   */
   actionPath: string
-
-  /**
-   * The label used at the link
-   */
   actionLabel: string
 }
 
