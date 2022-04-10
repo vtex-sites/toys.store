@@ -9,6 +9,7 @@ import type { HomePageQueryQuery } from '@generated/graphql'
 import VirtualConsultant from 'src/components/sections/VirtualConsultant'
 import Hero from 'src/components/sections/Hero'
 import Skills from 'src/components/sections/Skills'
+import Newsletter from 'src/components/sections/Newsletter'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -182,6 +183,10 @@ function Page(props: Props) {
           criança a desenvolver!
         </p>
       </Skills>
+      <Newsletter
+        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        onSubmit={() => {}}
+      />
       {/* CMS Sections */}
       <RenderCMS sections={cmsHome?.sections ?? fallbackContent} />
     </>
