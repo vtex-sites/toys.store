@@ -33,6 +33,10 @@
   --color-neutral-5: #74808b;
   --color-neutral-6: #5d666f;
   --color-neutral-7: #171a1c;
+  --color-theme-1: #8586db;
+  --color-theme-2: #000000;
+  --color-theme-3: #333056;
+  --color-theme-4: #8082db;
 
   // State
   --color-success: #cee8de;
@@ -45,7 +49,7 @@
   --color-text-inverse: var(--color-neutral-0);
 
   // --bg-body: var(--color-neutral-0);
-  --bg-body: #333056;
+  --bg-body: var(--color-theme-3);
   --bg-primary-light: var(--color-primary-0);
   --bg-secondary-light: var(--color-secondary-0);
   --bg-neutral-light: var(--color-neutral-1);
