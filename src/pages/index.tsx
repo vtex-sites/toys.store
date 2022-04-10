@@ -7,6 +7,12 @@ import { mark } from 'src/sdk/tests/mark'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
 import VirtualConsultant from 'src/components/sections/VirtualConsultant'
+import Hero from 'src/components/sections/Hero'
+import Skills from 'src/components/sections/Skills'
+import Newsletter from 'src/components/sections/Newsletter'
+import NewProducts from 'src/components/sections/NewProducts'
+import BannerText from 'src/components/sections/BannerText'
+import FavoriteProducts from 'src/components/sections/FavoriteProducts'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -105,6 +111,15 @@ const virtualConsultantJson = [
   },
 ]
 
+const skillsArray = [
+  'lorem ipsum dolor',
+  'sit amet',
+  'lorem ipsum',
+  'sit amet',
+  'lorem ipsum',
+  'lorem ipsum dolor',
+]
+
 function Page(props: Props) {
   const {
     data: { site, cmsHome },
@@ -144,6 +159,16 @@ function Page(props: Props) {
           },
         }}
       />
+      <Hero
+        title="Lorem Ipsum Dolor Sit Amet, Consectetur"
+        subtitle="Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis ex, quis dictum arcu arcu nec orci. Praesent rutrum mattis nisi."
+        mainLink="/"
+        mainLinkText="ver todos"
+        secondaryLink="/"
+        secondaryLinkText="encontre o presente ideal"
+        imageAlt="oi"
+        imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
+      />
       <VirtualConsultant filterValues={virtualConsultantJson}>
         <h3>Lorem ipsum dolor sit amet, consectetur</h3>
         <p>
@@ -151,6 +176,30 @@ function Page(props: Props) {
           ex, quis dictum
         </p>
       </VirtualConsultant>
+      <NewProducts>
+        <h3>Novidades</h3>
+      </NewProducts>
+      <BannerText
+        title="Get to know our next realease"
+        caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."
+        actionPath="/"
+        actionLabel="call to action"
+      />
+      <Skills skills={skillsArray}>
+        <h3>
+          Brincar também é um jeito de
+          <span className="lastWord"> aprender</span>
+        </h3>
+        <p>
+          Escolha brinquedos baseados nas habilidades que eles ajudam sua
+          criança a desenvolver!
+        </p>
+      </Skills>
+      <FavoriteProducts />
+      <Newsletter
+        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        onSubmit={() => {}}
+      />
       {/* CMS Sections */}
       <RenderCMS sections={cmsHome?.sections ?? fallbackContent} />
     </>

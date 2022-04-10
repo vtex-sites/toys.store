@@ -9,3 +9,6 @@ export type { HeroContentProps } from './HeroContent'
 
 export { default as HeroLink } from './HeroLink'
 export type { HeroLinkProps } from './HeroLink'
+
+export { default as HeroCard } from './HeroCard'
+export type { HeroCardProps } from './HeroCard'
