@@ -6,21 +6,17 @@
   width: 100%;
   height: var(--tap-min-size);
 
-  @include media(">=notebook") { height: var(--space-6); }
+  @include media(">=notebook") { height: auto; }
 
   [data-store-input] {
     width: 100%;
-    padding: var(--space-1) var(--space-7) var(--space-1) var(--space-2);
+    height: 50px;
+    padding: var(--space-3) var(--space-7) var(--space-3) var(--space-4);
+    color: var(--color-white-transparent-50);
+    background: inherit;
     border: var(--border-width-0) solid var(--color-border-input);
-    border-radius: var(--border-radius-default);
+    border-radius: var(--border-radius-input);
     transition: box-shadow .2s ease, border .2s ease;
-
-    &:hover {
-      border-color: var(--color-border-input-selected);
-      box-shadow: 0 0 0 var(--border-width-0) var(--color-border-input-selected);
-    }
-
-    @include input-focus-ring;
   }
 
   [data-store-icon] { display: block; }
@@ -28,15 +24,32 @@
   [data-store-button] {
     position: absolute;
     right: 0;
-    width: var(--space-7);
+    width: 147px;
     height: var(--space-7);
     padding: 0;
-    background-color: transparent;
+    cursor: pointer;
+    background-color: var(--color-neutral-0);
     border: 0;
+    border-radius: var(--border-radius-input);
 
     @include media(">=notebook") {
-      height: var(--space-6);
+      height: 50px;
       min-height: var(--space-6);
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--space-4);
+
+      &::before {
+        display: block;
+        font-family: var(--sans-serif);
+        font-size: var(--text-size-1);
+        font-weight: 500;
+        content: "pesquisar";
+      }
     }
   }
 
