@@ -2,8 +2,10 @@
 
 .navbar {
   padding: 0;
+  background: rgb(34 31 65 / 30%);
   border-bottom: var(--border-width-0) solid var(--color-neutral-2);
   box-shadow: 0 var(--space-0) var(--space-3) var(--color-black-transparent-5);
+  backdrop-filter: blur(14px);
 
   [data-store-search-input] {
     flex: 1 0 100%;
@@ -35,7 +37,9 @@
 }
 
 .navbar__menu[data-store-button] {
-  @include media(">=notebook") { display: none; }
+  @include media(">=notebook") {
+    display: none;
+  }
 }
 
 .navbar__buttons {
@@ -74,7 +78,9 @@
         padding: 0;
         border-width: 0;
 
-        &:hover, &:focus, &:focus-visible &:hover:focus-visible {
+        &:hover,
+        &:focus,
+        &:focus-visible &:hover:focus-visible {
           border-width: 0;
           box-shadow: 0 0;
         }
@@ -121,8 +127,7 @@
   overflow: hidden;
 
   @include media(">=notebook") {
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
+    padding: var(--space-4) 0;
   }
 }
 
@@ -135,6 +140,23 @@
   img {
     width: 100%;
     height: 100%;
+  }
+
+  svg {
+    .s0 {
+      background:
+        conic-gradient(
+          from -88.09deg at 50% 50%,
+          #ffd335 0deg,
+          #4bb8db 87.78deg,
+          #de68d1 231.8deg,
+          #ffd335 360deg
+        );
+    }
+
+    .s1 {
+      fill: #ffffff;
+    }
   }
 }
 
@@ -163,15 +185,30 @@
       width: fit-content;
       padding-left: 0;
 
-      @include media(">=notebook") { display: none; }
+      @include media(">=notebook") {
+        display: none;
+      }
     }
   }
 }
 
 .navlinks__list {
+  padding: 0;
+  background: rgb(34 31 65 / 40%);
+  backdrop-filter: blur(14px);
+
+  .grid-content {
+    padding: 0;
+  }
+
   a {
     display: block;
     width: 100%;
+    font-size: var(--text-size-1);
+    font-weight: var(--text-weight-black);
+    line-height: var(--space-3);
+    color: var(--color-neutral-0);
+    text-transform: lowercase;
   }
 
   @include media(">=notebook") {
@@ -179,11 +216,19 @@
       display: flex;
       column-gap: var(--space-3);
       padding-top: var(--space-1);
+
+      li {
+        margin-right: var(--space-5);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
     a {
       width: auto;
-      padding: var(--space-0) 0;
+      padding: var(--space-2) 0;
     }
   }
 
