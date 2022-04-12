@@ -1,10 +1,13 @@
 import { sendAnalyticsEvent, useSession } from '@faststore/sdk'
 import { graphql } from 'gatsby'
+import type { RefObject } from 'react'
 import React, { useEffect, useState } from 'react'
 import { DiscountBadge } from 'src/components/ui/Badge'
 import Breadcrumb from 'src/components/ui/Breadcrumb'
 import BuyButton from 'src/components/ui/BuyButton'
 import { Image } from 'src/components/ui/Image'
+import Button from 'src/components/ui/Button'
+import Icon from 'src/components/ui/Icon'
 import Price from 'src/components/ui/Price'
 import ProductTitle from 'src/components/ui/ProductTitle'
 import QuantitySelector from 'src/components/ui/QuantitySelector'
@@ -24,6 +27,7 @@ interface Props {
 function ProductDetails({ product: staleProduct }: Props) {
   const { currency } = useSession()
   const [addQuantity, setAddQuantity] = useState(1)
+  const myRef = React.createRef() as RefObject<HTMLInputElement>
 
   // Stale while revalidate the product for fetching the new price etc
   const { data, isValidating } = useProduct(staleProduct.id, {
@@ -109,68 +113,92 @@ function ProductDetails({ product: staleProduct }: Props) {
       <Breadcrumb breadcrumbList={breadcrumbs.itemListElement} />
 
       <section className="product-details__body">
-        <header className="product-details__title">
-          <ProductTitle
-            title={<h1 className="title-product">{name}</h1>}
-            label={<DiscountBadge listPrice={listPrice} spotPrice={lowPrice} />}
-            refNumber={productId}
-          />
-        </header>
+        <section className="product-details__floatbuy">
+          <header className="product-details__title">
+            <ProductTitle
+              title={<h1 className="title-product">{name}</h1>}
+              label={
+                <DiscountBadge listPrice={listPrice} spotPrice={lowPrice} />
+              }
+              refNumber={productId}
+              brandName={brand.name}
+              description={description}
+            />
+
+            <Button
+              buttonClass="button-add-pdp"
+              variant="secondary"
+              icon={<Icon name="buttonSeemore" width={12} height={8} />}
+              iconPosition="right"
+              onClick={() => handleScrollToElement(myRef)}
+            >
+              saiba mais
+            </Button>
+          </header>
+
+          <section className="product-details__settings">
+            <section className="product-details__values">
+              <div className="product-details__prices">
+                <Price
+                  value={listPrice}
+                  formatter={useFormattedPrice}
+                  testId="list-price"
+                  data-value={listPrice}
+                  variant="listing"
+                  classes="text-body-small"
+                  SRText="De:"
+                />
+                <Price
+                  value={lowPrice}
+                  formatter={useFormattedPrice}
+                  testId="price"
+                  data-value={lowPrice}
+                  variant="spot"
+                  classes="title-display"
+                  SRText="Por:"
+                />
+              </div>
+              {/* <div className="prices">
+                <p className="price__old text-body-small">{formattedListPrice}</p>
+                <p className="price__new">{isValidating ? '' : formattedPrice}</p>
+              </div> */}
+            </section>
+            <section className="product-details__actions">
+              <QuantitySelector min={1} max={10} onChange={setAddQuantity} />
+
+              {/* NOTE: A loading skeleton had to be used to avoid a Lighthouse's
+                  non-composited animation violation due to the button transitioning its
+                  background color when changing from its initial disabled to active state.
+                  See full explanation on commit https://git.io/JyXV5. */}
+              {isValidating ? (
+                <AddToCartLoadingSkeleton />
+              ) : (
+                <BuyButton disabled={buyDisabled} {...buyProps}>
+                  add ao carrinho
+                </BuyButton>
+              )}
+            </section>
+          </section>
+        </section>
 
         <section className="product-details__image">
-          <Image
-            preload
-            loading="eager"
-            src={productImages[0].url}
-            alt={productImages[0].alternateName}
-            width={360}
-            height={270}
-            sizes="(max-width: 768px) 25vw, 50vw"
-          />
+          {productImages.map((productImage, index) => {
+            return (
+              <Image
+                preload
+                loading="eager"
+                src={productImage.url}
+                alt={productImage.alternateName}
+                width={802}
+                height={802}
+                sizes="(max-width: 768px) 25vw, 50vw"
+                key={index}
+              />
+            )
+          })}
         </section>
 
-        <section className="product-details__settings">
-          <section className="product-details__values">
-            <div className="product-details__prices">
-              <Price
-                value={listPrice}
-                formatter={useFormattedPrice}
-                testId="list-price"
-                data-value={listPrice}
-                variant="listing"
-                classes="text-body-small"
-                SRText="Original price:"
-              />
-              <Price
-                value={lowPrice}
-                formatter={useFormattedPrice}
-                testId="price"
-                data-value={lowPrice}
-                variant="spot"
-                classes="title-display"
-                SRText="Sale Price:"
-              />
-            </div>
-            {/* <div className="prices">
-              <p className="price__old text-body-small">{formattedListPrice}</p>
-              <p className="price__new">{isValidating ? '' : formattedPrice}</p>
-            </div> */}
-            <QuantitySelector min={1} max={10} onChange={setAddQuantity} />
-          </section>
-          {/* NOTE: A loading skeleton had to be used to avoid a Lighthouse's
-              non-composited animation violation due to the button transitioning its
-              background color when changing from its initial disabled to active state.
-              See full explanation on commit https://git.io/JyXV5. */}
-          {isValidating ? (
-            <AddToCartLoadingSkeleton />
-          ) : (
-            <BuyButton disabled={buyDisabled} {...buyProps}>
-              Add to Cart
-            </BuyButton>
-          )}
-        </section>
-
-        <section className="product-details__content">
+        <section className="product-details__content" ref={myRef}>
           <article className="product-details__description">
             <h2 className="title-subsection">Description</h2>
             <p className="text-body">{description}</p>
@@ -179,6 +207,10 @@ function ProductDetails({ product: staleProduct }: Props) {
       </section>
     </Section>
   )
+}
+
+function handleScrollToElement(myRef: React.RefObject<HTMLElement>) {
+  window.scrollTo(0, myRef.current ? myRef.current.offsetTop : 0)
 }
 
 function AddToCartLoadingSkeleton() {

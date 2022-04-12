@@ -7,13 +7,13 @@
   bottom: 0;
   left: 0;
   z-index: 3;
-  background-color: var(--color-black-transparent-20);
+  background-color: var(--color-black-transparent-50);
+  backdrop-filter: blur(14px);
 }
 
 [data-slide-over] {
   position: fixed;
   height: 100vh;
-  background-color: var(--bg-neutral-lightest);
 }
 
 [data-slide-over-size="full"] {
@@ -23,11 +23,12 @@
 [data-slide-over-size="partial"] {
   --gap-out: 48px;
 
-  width: calc(100vw - var(--gap-out));
+  width: 100vw;
 
   @include media(">=notebook") {
-    width: calc(100% / 3);
-    max-width: calc(var(--breakpoint-notebook) / 3);
+    width: 23%;
+
+    // max-width: calc(var(--breakpoint-notebook) / 3);
   }
 }
 

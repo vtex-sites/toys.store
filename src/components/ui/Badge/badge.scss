@@ -4,12 +4,12 @@
   align-items: stretch;
   width: fit-content;
   height: fit-content;
-  color: var(--color-text);
-  font-weight: var(--text-weight-bold);
   font-size: var(--text-size-2);
-  white-space: nowrap;
+  font-weight: var(--text-weight-bold);
+  color: var(--color-neutral-0);
   text-transform: uppercase;
-  border-radius: var(--border-radius-pill);
+  white-space: nowrap;
+  border-radius: var(--border-radius-regular);
 
   > span {
     padding: var(--space-1) var(--space-2);
@@ -46,7 +46,7 @@
 }
 
 [data-store-badge-variant="info"] {
-  background-color: var(--bg-info);
+  background-color: var(--color-theme-5);
 }
 
 [data-store-discount-badge-variant="low"] {

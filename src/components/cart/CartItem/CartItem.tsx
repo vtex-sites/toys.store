@@ -1,7 +1,6 @@
 import { Card, CardActions, CardContent, CardImage } from '@faststore/ui'
 import React from 'react'
 import Button from 'src/components/ui/Button'
-import Icon from 'src/components/ui/Icon'
 import { Image } from 'src/components/ui/Image'
 import Price from 'src/components/ui/Price'
 import QuantitySelector from 'src/components/ui/QuantitySelector'
@@ -30,8 +29,8 @@ function CartItem({ item }: Props) {
           <Image
             src={item.itemOffered.image[0].url}
             alt={item.itemOffered.image[0].alternateName}
-            width={72}
-            height={72}
+            width={95}
+            height={95}
           />
         </CardImage>
         <div data-cart-item-summary>
@@ -59,23 +58,17 @@ function CartItem({ item }: Props) {
             />
           </span>
         </div>
+        <CardActions>
+          <Button variant="tertiary" iconPosition="left" {...btnProps}>
+            remover
+          </Button>
+          <QuantitySelector
+            min={1}
+            initial={item.quantity}
+            onChange={(quantity) => updateItemQuantity(item.id, quantity)}
+          />
+        </CardActions>
       </CardContent>
-
-      <CardActions>
-        <Button
-          variant="tertiary"
-          icon={<Icon name="XCircle" width={18} height={18} />}
-          iconPosition="left"
-          {...btnProps}
-        >
-          Remove
-        </Button>
-        <QuantitySelector
-          min={1}
-          initial={item.quantity}
-          onChange={(quantity) => updateItemQuantity(item.id, quantity)}
-        />
-      </CardActions>
     </Card>
   )
 }

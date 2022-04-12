@@ -6,9 +6,25 @@
 
 .product-title__header {
   display: flex;
-  justify-content: space-between;
+  flex-flow: wrap;
   column-gap: var(--space-2);
-  [data-store-badge] { white-space: nowrap; }
+  justify-content: space-between;
+
+  [data-store-badge] {
+    box-sizing: border-box;
+    margin-bottom: var(--space-1);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 10px;
+    color: var(--color-theme-4);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid var(--color-theme-4);
+    border-radius: 100px;
+  }
 
   @include media(">=tablet", "<notebook") {
     flex-direction: column;
@@ -16,6 +32,11 @@
   }
 }
 
-.product-title__header + .product-title__addendum { margin-top: var(--space-3); }
+.product-title__addendum {
+  margin-top: var(--space-1);
+  color: var(--color-theme-3);
+}
 
-.product-title__addendum { color: var(--color-text-subtle); }
+.product-title__brandname, .product-title__shortdescription { color: var(--color-theme-3); }
+
+.product-title__shortdescription { margin-top: var(--space-2); }
