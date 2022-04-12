@@ -120,6 +120,9 @@
 
       [data-store-input] {
         width: calc(100% - var(--space-7));
+        margin-right: 7px;
+        border-color: var(--color-neutral-0);
+        border-width: 1px;
       }
 
       [data-store-icon] {
