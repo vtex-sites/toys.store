@@ -17,10 +17,15 @@
   padding: 26px;
   background: linear-gradient(95.28deg, rgb(0 174 255 / 80%) 0%, #de68d1 59.98%, #f3d752 115.17%);
   border-radius: 30px;
+
+  @include media("<notebook") {
+    max-height: inherit;
+    padding: 56px 26px 51px;
+  }
 }
 
 [data-newsletter-header] {
-  font-size: 32px;
+  font-size: 27px;
 
   // font-family: 'Montserrat';
   font-style: normal;
@@ -45,6 +50,10 @@
   margin: 36px 0;
   border: 1px solid rgb(255 255 255 / 50%);
   border-radius: var(--border-radius-default);
+
+  @include media("<notebook") {
+    margin: 34px 0 0;
+  }
 
   input {
     flex-grow: 1;
