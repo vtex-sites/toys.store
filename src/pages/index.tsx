@@ -79,8 +79,8 @@ const virtualConsultantJson = [
       },
       {
         title: 'Para ambos',
-        values: 'Menino/Menina',
-        maps: 'specificationFilter_11,specificationFilter_11',
+        values: 'Ambos',
+        maps: 'specificationFilter_11',
       },
     ],
   },
@@ -89,23 +89,23 @@ const virtualConsultantJson = [
     optionsValue: [
       {
         title: 'Até R$99,99',
-        values: 'ate-99-99',
-        maps: 'price',
+        values: '0.1 TO 99.99',
+        maps: 'p',
       },
       {
         title: 'De R$100,00 até R$299,99',
-        values: 'de-1000-ate-299-99',
-        maps: 'price',
+        values: '100.00 TO 299.99',
+        maps: 'p',
       },
       {
         title: 'De R$300,00 até R$999,99',
-        values: 'de-300-ate-999-99',
-        maps: 'price',
+        values: '300.00 TO 999.99',
+        maps: 'p',
       },
       {
         title: 'Acima de R$1.000,00',
-        values: 'acima-de-1000',
-        maps: 'price',
+        values: '1000 TO 999999.99',
+        maps: 'p',
       },
     ],
   },
