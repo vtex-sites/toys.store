@@ -16,15 +16,16 @@
   // Colors /////////////////////////
 
   // Brand
-  --color-primary-0: #ebdcff;
-  --color-primary-1: #8d50fd;
-  --color-primary-2: #732fe2;
-  --color-primary-3: #5900c8;
+  --color-primary-0: #dcdceb;
+  --color-primary-1: #c5c5e7;
+  --color-primary-2: #adaee6;
+  --color-primary-3: #8082db;
+  --color-primary-4: #333056;
   --color-secondary-0: #ecf0ff;
   --color-secondary-1: #d8e2ff;
   --color-secondary-2: #00419e;
-  --color-secondary-3: #002c71;
-  --color-secondary-4: #001947;
+  --color-secondary-3: #e48fda;
+  --color-secondary-4: #de68d1;
   --color-neutral-0: #ffffff;
   --color-neutral-1: #f1f2f3;
   --color-neutral-2: #e3e6e8;
@@ -45,7 +46,7 @@
   --color-error: #fee1e1;
 
   // Customizable
-  --color-text: var(--color-neutral-7);
+  --color-text: var(--color-primary-4);
   --color-text-inverse: var(--color-neutral-0);
 
   // --bg-body: var(--color-neutral-0);
@@ -59,7 +60,7 @@
   // Typography /////////////////////
 
   // Family
-  --sans-serif: "Lato", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  --sans-serif: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
   // Base
   --base-font-size: 16px;
@@ -89,7 +90,7 @@
   --page-padding-notebook: var(--space-5);
 
   // Target Size
-  --tap-min-size: 48px;
+  --tap-min-size: 50px;
 
   // Box-Shadows ////////////////////
   --box-shadow: 0 1px 4px rgb(0 0 0 / 10%), 0 6px 8px rgb(0 0 0 / 10%);
@@ -100,11 +101,11 @@
   --border-radius-flat: 0;
   --border-radius-small: .125rem;
   --border-radius-regular: .25rem;
-  --border-radius-pill: 100px;
+  --border-radius-pill: 60px;
   --border-radius-circle: 100%;
 
-  --border-radius-default: var(--border-radius-regular);
-  --border-radius-button: var(--border-radius-regular);
+  --border-radius-default: var(--border-radius-pill);
+  --border-radius-button: var(--border-radius-pill);
 
   // Width
   --border-width-0: 1px;

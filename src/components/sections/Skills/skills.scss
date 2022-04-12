@@ -1,0 +1,70 @@
+.frn-skills {
+  background: transparent;
+
+  &__grid-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--page-padding-notebook);
+    padding-bottom: var(--page-padding-notebook);
+  }
+
+  &__grid-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  &__skill {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  &__children {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+    order: 0;
+    max-width: 420px;
+    padding: 0;
+    margin: 33px 0;
+    text-align: center;
+
+    h3 {
+      flex: none;
+      flex-grow: 0;
+      order: 0;
+      font-size: 32px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 39px;
+      color: #ffffff;
+
+      .lastWord {
+        color: var(--color-link);
+      }
+    }
+
+    p {
+      flex: none;
+      flex-grow: 0;
+      order: 1;
+      margin: 15px 0;
+      font-size: 16px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+}

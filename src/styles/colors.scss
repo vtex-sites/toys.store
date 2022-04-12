@@ -12,7 +12,7 @@
   --color-white-transparent-20: rgb(255 255 255 / 20%);
 
   // Text
-  --color-link: var(--color-secondary-2);
+  --color-link: var(--color-secondary-4);
   --color-link-visited: var(--color-visited);
   --color-link-inverse: var(--color-neutral-0);
   --color-text-disabled: var(--color-neutral-6);
@@ -25,9 +25,9 @@
   --bg-primary-hover: var(--color-primary-2);
   --bg-primary-pressed: var(--color-primary-1);
 
-  --bg-secondary-default: var(--color-secondary-4);
-  --bg-secondary-hover: var(--color-secondary-3);
-  --bg-secondary-pressed: var(--color-secondary-2);
+  --bg-secondary-default: var(--color-primary-4);
+  --bg-secondary-hover: var(--color-primary-2);
+  --bg-secondary-pressed: var(--color-primary-1);
 
   --bg-darken-hover: var(--color-black-transparent-5);
   --bg-darken-pressed: var(--color-black-transparent-10);
