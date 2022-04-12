@@ -89,14 +89,17 @@ function Footer() {
         <UIIcon
           component={
             <img
-              src="/BaseStore.svg"
-              alt="BaseStore logo"
-              width="124px"
-              height="32px"
+              // className="footer__logo"
+              src="/Logo.png"
+              alt="VTEX logo"
+              width="150"
+              // margin="-31px 0 0px -42px;"
+              height="124.7"
               loading="lazy"
             />
           }
         />
+        {/* <Icon width="34px" height="24px" name="logoToyStore" /> */}
 
         <UIPaymentMethods>
           <p className="title-sub-subsection">Payment Methods</p>
@@ -137,7 +140,21 @@ function Footer() {
         </UIPaymentMethods>
 
         <div className="footer__copyright / text-body-small">
-          <p>This website uses VTEX technology</p>
+          <p>
+            Powered by
+            <UIIcon
+              component={
+                <img
+                  src="/vtexLogo.svg"
+                  alt="VTEX logo"
+                  width="41px;"
+                  // margin="0px 4px -4px;"
+                  height="14.91px;"
+                  loading="lazy"
+                />
+              }
+            />
+          </p>
           <p>
             In-store price may vary. Prices and offers are subject to change.
             2021 Store name. All rights reserved. Store is a trademark of Store
