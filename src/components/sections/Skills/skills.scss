@@ -15,7 +15,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 30%;
+    margin: 0 auto;
+
+    @include media("<notebook") { width: 80%; }
+
+    @include media(">=notebook") { width: 30%; }
+
+    &__mobile-none {
+      @include media("<notebook") { display: none; }
+    }
   }
 
   &__skill {
@@ -31,10 +39,14 @@
     align-items: center;
     justify-content: center;
     order: 0;
-    max-width: 420px;
+    width: 100%;
     padding: 0;
     margin: 33px 0;
     text-align: center;
+
+    @include media("<notebook") { margin: 0; }
+
+    @include media(">=notebook") { max-width: 420px; }
 
     h3 {
       flex: none;
