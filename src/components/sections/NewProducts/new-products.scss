@@ -9,6 +9,11 @@
     justify-content: space-between;
     padding-top: var(--page-padding-notebook);
     padding-bottom: var(--page-padding-notebook);
+
+    @include media("<notebook") {
+      padding-right: 0;
+      margin-left: calc((100vw - var(--breakpoint-mobile)) / 2);
+    }
   }
 
   &__children {
@@ -34,6 +39,10 @@
       font-weight: 500;
       line-height: 37px;
       color: #ffffff;
+
+      @include media("<notebook") {
+        padding-right: var(--page-padding-notebook);
+      }
     }
 
     p {

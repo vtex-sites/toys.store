@@ -4,21 +4,37 @@
 
   &__grid-content {
     display: flex;
+    flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: space-between;
     padding-top: var(--page-padding-notebook);
     padding-bottom: var(--page-padding-notebook);
+
+    @include media(">=notebook") {
+      flex-direction: row;
+      padding-right: 0;
+      margin-left: calc((100vw - var(--breakpoint-notebook)) / 2);
+    }
+
+    @include media("<notebook") {
+      padding-right: 0;
+      margin-left: calc((100vw - var(--breakpoint-phonemid)) / 6);
+    }
   }
 
   &__children {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 250px;
     padding: 0;
-    margin-right: 57px;
+    padding-right: var(--page-padding-notebook);
     text-align: left;
+
+    @include media(">=notebook") {
+      max-width: 250px;
+      margin-right: 57px;
+    }
 
     &-infos {
       margin-bottom: 45px;
