@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--space-5) var(--page-padding-phone) var(--space-5);
+    color: var(--color-primary-4);
     background-color: var(--color-white-transparent-9);
 
     @include media("<notebook") {
@@ -19,6 +20,7 @@
     > [data-store-icon-button] {
       &:last-of-type {
         margin-right: calc(-1 * var(--space-1));
+        color: var(--color-primary-4);
       }
     }
   }
@@ -26,6 +28,10 @@
   .cart-sidebar__title {
     display: flex;
     align-items: center;
+
+    button {
+      color: var(--color-theme-3);
+    }
 
     p {
       margin-right: var(--space-2);
