@@ -19,36 +19,49 @@
     transition: box-shadow .2s ease, border .2s ease;
   }
 
-  [data-store-icon] { display: block; }
+  [data-store-icon] {
+    display: block;
+  }
 
   [data-store-button] {
-    position: absolute;
-    right: 0;
-    width: 147px;
-    height: var(--space-7);
+    width: 40px;
+    height: 40px;
     padding: 0;
     cursor: pointer;
-    background-color: var(--color-neutral-0);
+    background-color: transparent;
     border: 0;
+    border: 2px solid var(--color-neutral-0);
     border-radius: var(--border-radius-input);
 
     @include media(">=notebook") {
+      position: absolute;
+      right: 0;
+      width: 147px;
       height: 50px;
       min-height: var(--space-6);
+      background-color: var(--color-neutral-0);
+      border: 0;
     }
 
     span {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 var(--space-4);
+      display: block;
+
+      @include media(">=notebook") {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--space-4);
+      }
 
       &::before {
         display: block;
         font-family: var(--sans-serif);
         font-size: var(--text-size-1);
         font-weight: 500;
-        content: "pesquisar";
+
+        @include media(">=notebook") {
+          content: "pesquisar";
+        }
       }
     }
   }

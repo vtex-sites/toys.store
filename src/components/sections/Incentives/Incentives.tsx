@@ -77,7 +77,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
                 </li>
               ))}
             </Carousel>
-            <div className="topLinks">
+            <div className="topLinks hidden-mobile">
               <Link className="topLinks__item" to="/about">
                 About
               </Link>

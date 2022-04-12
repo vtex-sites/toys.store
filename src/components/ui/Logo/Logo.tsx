@@ -11,21 +11,21 @@ function Logo() {
     >
       <defs>
         <radialGradient
-          id="g1"
-          cx="26"
-          cy="25.3"
-          r="175.9"
+          id="paint0_angular_315_38792"
+          cx="0"
+          cy="0"
+          r="1"
           gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(62.9963 62.3489) rotate(-138.145) scale(175.871 97.5583)"
         >
-          <stop offset="0" stopColor="#ffd335" />
-          <stop offset=".2" stopColor="#4bb8db" />
-          <stop offset=".6" stopColor="#de68d1" />
+          <stop stopColor="#FFD335" />
+          <stop offset="0.243831" stopColor="#4BB8DB" />
+          <stop offset="0.643884" stopColor="#DE68D1" />
         </radialGradient>
       </defs>
       <path
-        id="Layer"
-        className="s0"
-        d="m25.6 1.4c12.5-4.4 25.2 5.8 23.8 18.9l-1.5 14.4c-1.5 14.1-18 20.9-29.1 12.1l-12.1-9.5c-11.1-8.9-8.1-26.5 5.3-31.1z"
+        d="M62.5753 38.3881C75.0604 34.0137 87.8405 44.1504 86.4236 57.3034L84.8774 71.6572C83.3592 85.751 66.9015 92.6408 55.7954 83.8319L43.7169 74.2518C32.6108 65.443 35.5726 47.8489 48.9506 43.1617L62.5753 38.3881Z"
+        fill="url(#paint0_angular_315_38792)"
       />
       <path
         id="Layer"
