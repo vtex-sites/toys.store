@@ -4,7 +4,7 @@ module.exports = {
 
   // Platform specific configs for API
   api: {
-    storeId: 'frncubo', // deixar frn por enquanto... original: toys
+    storeId: 'toys', // deixar frn por enquanto... original: toys
     environment: 'vtexcommercestable',
     hideUnavailableItems: true,
   },

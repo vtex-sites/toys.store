@@ -28,7 +28,62 @@ function VirtualConsultant(
   { children, className = '', filterValues }: PropsWithChildren<Props>,
   { onClickLink }: NavLinksProps
 ) {
-  const [option, setOption] = useState('')
+  const [option0, setOption0] = useState('')
+  const [option1, setOption1] = useState('')
+  const [option2, setOption2] = useState('')
+
+  function verifyRadio(radioName: string, radioValue: string) {
+    if (radioName === 'radio-group0') {
+      setOption0(radioValue)
+    } else if (radioName === 'radio-group1') {
+      setOption1(radioValue)
+    } else {
+      setOption2(radioValue)
+    }
+  }
+
+  function verifySelected(radioName: string) {
+    if (radioName === 'radio-group0') {
+      return option0
+    }
+
+    if (radioName === 'radio-group1') {
+      return option1
+    }
+
+    return option2
+  }
+
+  function handleUrl(urlOption0: string) {
+    let urlFinal = ''
+    const urlMapping = urlOption0.split('|')
+
+    const fixPath = '/brinquedos'
+    const fixMap = '?map=c'
+    let urlPathTemporary: string | undefined = ''
+    let urlMapTemporary: string | undefined = ''
+
+    urlMapping.map((url) => {
+      if (url) {
+        const ways = url.split('/')
+
+        urlPathTemporary = ways[0] ? `${urlPathTemporary}/${ways[0]}` : ''
+        urlMapTemporary = ways[1] ? `${urlMapTemporary},${ways[1]}` : ''
+
+        return ''
+      }
+
+      return ''
+    })
+
+    if (urlPathTemporary && urlMapTemporary) {
+      urlFinal = `${fixPath}${urlPathTemporary}${fixMap}${urlMapTemporary}`
+    } else {
+      urlFinal = `/brinquedos?map=c`
+    }
+
+    return urlFinal
+  }
 
   return (
     <section className={`section frn-consultant ${className}`}>
@@ -53,12 +108,14 @@ function VirtualConsultant(
               <div className="frn-consultant__wrapper">
                 <RadioGroup
                   name={`radio-group${index}`}
-                  selectedValue={option}
-                  onChange={(v) => setOption(v.currentTarget.value)}
+                  selectedValue={verifySelected(`radio-group${index}`)}
+                  onChange={(v) =>
+                    verifyRadio(`radio-group${index}`, v.currentTarget.value)
+                  }
                 >
                   {filterValue?.optionsValue?.map((filterOption, index2) => (
                     <RadioOption
-                      value={`${filterOption.values}/?map=c,${filterOption.maps}`}
+                      value={`${filterOption.values}/${filterOption.maps}`}
                       label={`${filterOption.title}`}
                       key={String(index2)}
                     >
@@ -77,7 +134,7 @@ function VirtualConsultant(
 
           <Link
             variant="display"
-            to={`/brinquedos/${option}`}
+            to={handleUrl(`${option0}|${option1}|${option2}`)}
             onClick={onClickLink}
           >
             pesquisar ►
