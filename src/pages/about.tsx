@@ -18,7 +18,7 @@ function Page() {
       />
       <AboutDescription>
         <h3>Lorem ipsum dolor</h3>
-        <p>
+        <p className="frn-aboutDescription__children__desktop">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nisl
           quis arcu accumsan aliquam. Donec tempus rhoncus felis vel facilisis.
           Quisque eleifend fermentum ex, sit amet interdum dolor dapibus vitae.
@@ -79,6 +79,39 @@ function Page() {
           purus facilisis, sodales ex eu, aliquam lacus. Lorem ipsum dolor sit
           amet, consectetur adipiscing elit. Sed ut nisl quis arcu accumsan
           aliquam.
+        </p>
+        <p className="frn-aboutDescription__children__mobile">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nisl
+          quis arcu accumsan aliquam. Donec tempus rhoncus felis vel facilisis.
+          Quisque eleifend fermentum ex, sit amet interdum dolor dapibus vitae.
+          Proin non sem vulputate, porttitor nibh eget, consectetur dolor. Sed
+          tincidunt scelerisque quam, eu fringilla risus fermentum in. Proin
+          mattis mi nec justo ullamcorper, nec vulputate mi venenatis.
+          Suspendisse porta sagittis lacus, a tincidunt ante feugiat id.
+          <br />
+          <Banner>
+            <BannerContent>
+              <div className="title-display-big">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                  facilisis, venenatis tortor eget.
+                </p>
+              </div>
+              <BannerLink>
+                <LinkButton to="/" inverse>
+                  call to action
+                </LinkButton>
+              </BannerLink>
+            </BannerContent>
+          </Banner>
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nisl
+          quis arcu accumsan aliquam. Donec tempus rhoncus felis vel facilisis.
+          Quisque eleifend fermentum ex, sit amet interdum dolor dapibus vitae.
+          Proin non sem vulputate, porttitor nibh eget, consectetur dolor. Sed
+          tincidunt scelerisque quam, eu fringilla risus fermentum in. Proin
+          mattis mi nec justo ullamcorper, nec vulputate mi venenatis.
+          Suspendisse porta sagittis lacus, a tincidunt ante feugiat id.
         </p>
       </AboutDescription>
     </>
