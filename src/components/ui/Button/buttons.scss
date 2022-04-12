@@ -69,7 +69,11 @@
   }
 
   &[data-button-variant="tertiary"] {
-    padding: var(--space-2);
+    display: flex;
+    width: 40px;
+    height: 40px;
+    min-height: inherit;
+    padding: 0;
     color: var(--color-neutral-0);
     background-color: transparent;
     border: 2px solid var(--color-neutral-0);
