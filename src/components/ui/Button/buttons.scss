@@ -72,14 +72,16 @@
   }
 
   &[data-button-variant="tertiary"] {
-    width: 40px;
-    height: 40px;
-    min-height: inherit;
-    padding: 0;
-    color: var(--color-neutral-0);
-    background-color: transparent;
-    border: 2px solid var(--color-neutral-0);
-    border-radius: var(--border-radius-circle);
+    &[data-button-signin-link] {
+      width: 40px;
+      height: 40px;
+      min-height: inherit;
+      padding: 0;
+      color: var(--color-neutral-0);
+      background-color: transparent;
+      border: 2px solid var(--color-neutral-0);
+      border-radius: var(--border-radius-circle);
+    }
 
     &[data-button-inverse] {
       padding: 0 10px;
