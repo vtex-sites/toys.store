@@ -211,7 +211,13 @@
           .hero-card__content {
             padding: 20px 40px;
 
-            @include media(">=notebook") { padding: 35px; }
+            @include media(">=notebook") {
+              padding: 35px;
+            }
+
+            .link-button {
+              margin-top: 4px;
+            }
           }
         }
 
@@ -286,7 +292,9 @@
 
         @include media("<notebook") { margin-bottom: 15px; }
 
-        @include media(">=notebook") { width: 320px; }
+        @include media(">=notebook") {
+          width: 320px;
+        }
       }
 
       &__secondary-cards {

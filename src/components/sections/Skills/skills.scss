@@ -17,12 +17,18 @@
     justify-content: space-between;
     margin: 0 auto;
 
-    @include media("<notebook") { width: 80%; }
+    @include media("<notebook") {
+      width: 100%;
+    }
 
-    @include media(">=notebook") { width: 30%; }
+    @include media(">=notebook") {
+      width: 32%;
+    }
 
     &__mobile-none {
-      @include media("<notebook") { display: none; }
+      @include media("<notebook") {
+        display: none;
+      }
     }
   }
 
@@ -44,9 +50,13 @@
     margin: 33px 0;
     text-align: center;
 
-    @include media("<notebook") { margin: 0; }
+    @include media("<notebook") {
+      margin: 0;
+    }
 
-    @include media(">=notebook") { max-width: 420px; }
+    @include media(">=notebook") {
+      max-width: 420px;
+    }
 
     h3 {
       flex: none;
@@ -69,10 +79,9 @@
       flex: none;
       flex-grow: 0;
       order: 1;
+      padding: 0 20px;
       margin: 15px 0;
       font-size: 16px;
-
-      // font-family: 'Montserrat';
       font-style: normal;
       font-weight: 500;
       line-height: 20px;
