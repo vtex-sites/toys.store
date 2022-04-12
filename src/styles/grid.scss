@@ -27,10 +27,10 @@
   box-sizing: border-box;
   width: 100%;
   max-width: var(--breakpoint-notebook);
-  margin-right: auto;
-  margin-left: auto;
   padding-right: var(--page-padding-phone);
   padding-left: var(--page-padding-phone);
+  margin-right: auto;
+  margin-left: auto;
 
   @include media(">=tablet") {
     padding-right: var(--page-padding-tablet);

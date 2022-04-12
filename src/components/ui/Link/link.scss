@@ -19,13 +19,13 @@ a, [data-store-link] {
 // Links ////////////////////////////
 
 [data-link-variant="default"] {
-  color: var(--color-link);
   line-height: 1.5;
+  color: var(--color-link);
 }
 
 [data-link-variant="display"] {
-  color: var(--color-text-display);
   line-height: 1.5;
+  color: var(--color-text-display);
   &:visited { color: var(--color-text-display); }
 }
 
@@ -36,8 +36,8 @@ a, [data-store-link] {
 }
 
 [data-link-variant="footer"] {
-  color: var(--color-text);
   font-size: var(--text-size-1);
+  color: var(--color-text);
 
   @include media(">=notebook") { padding: var(--space-1) var(--space-0); }
 }
