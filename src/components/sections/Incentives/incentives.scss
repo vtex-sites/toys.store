@@ -183,13 +183,8 @@
 
     [data-store-list] {
       padding: var(--space-3) 0;
+      color: var(--color-neutral-0);
       border-bottom: 1px solid var(--color-white-transparent-30);
-    }
-
-    [data-store-incentive] {
-      svg {
-        filter: invert(1);
-      }
     }
   }
 }

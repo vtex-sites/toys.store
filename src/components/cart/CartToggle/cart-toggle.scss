@@ -4,12 +4,9 @@
   position: relative;
   padding: var(--space-2);
   margin-left: var(--space-3);
+  color: var(--color-neutral-0);
   border: 2px solid var(--color-neutral-0);
   border-radius: var(--border-radius-circle);
-
-  svg {
-    filter: invert(1);
-  }
 
   &::after {
     --cart-toggle-size: var(--space-3);

@@ -12,6 +12,10 @@
     padding: var(--space-5) var(--page-padding-phone) var(--space-5);
     background-color: var(--color-white-transparent-9);
 
+    @include media("<notebook") {
+      padding: 29px 25px;
+    }
+
     > [data-store-icon-button] {
       &:last-of-type {
         margin-right: calc(-1 * var(--space-1));

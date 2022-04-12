@@ -4,6 +4,10 @@
   padding: var(--space-4) var(--space-5) var(--space-4) var(--space-3);
   border-bottom: var(--border-width-0) solid var(--color-gray-transparent);
 
+  @include media("<notebook") {
+    padding: 27px 33px 27px 21px;
+  }
+
   [data-card-content] {
     display: flex;
     align-items: center;
