@@ -1,6 +1,5 @@
 import { List } from '@faststore/ui'
 import React, { useRef } from 'react'
-import Alert from 'src/components/ui/Alert'
 import { Badge } from 'src/components/ui/Badge'
 import Button from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
@@ -37,7 +36,11 @@ function CartSidebar() {
     >
       <header data-testid="cart-sidebar">
         <div className="cart-sidebar__title">
-          <p className="title-display">Your Cart</p>
+          <IconButton
+            aria-label="Cart title"
+            icon={<Icon name="ShoppingCart" width={25} height={25} />}
+          />
+          <p className="title-display">Seu carrinho</p>
           <Badge variant="info" small>
             {totalItems}
           </Badge>
@@ -45,14 +48,10 @@ function CartSidebar() {
         <IconButton
           data-testid="cart-sidebar-button-close"
           aria-label="Close Cart"
-          icon={<Icon name="X" width={32} height={32} />}
+          icon={<Icon name="X" width={35} height={35} />}
           onClick={() => dismissTransition.current?.()}
         />
       </header>
-      <Alert icon={<Icon name="Truck" width={24} height={24} />}>
-        Free shipping starts at $300
-      </Alert>
-
       {isEmpty ? (
         <EmptyCart onDismiss={() => dismissTransition.current?.()} />
       ) : (
@@ -81,9 +80,15 @@ function CartSidebar() {
                   iconPosition="right"
                   {...btnProps}
                 >
-                  {isValidating ? 'Loading...' : 'Checkout'}
+                  {isValidating ? 'Loading...' : 'finalizar o pedido'}
                 </Button>
               }
+            />
+            <IconButton
+              data-testid="cart-sidebar-button-close"
+              aria-label="continuar comprando"
+              icon={<Icon name="X" width={35} height={35} />}
+              onClick={() => dismissTransition.current?.()}
             />
           </footer>
         </>

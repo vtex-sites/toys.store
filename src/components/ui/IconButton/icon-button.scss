@@ -4,9 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--tap-min-size);
-  height: var(--tap-min-size);
-  color: var(--color-text);
+  width: var(--svg-min-size);
+  height: var(--svg-min-size);
+  color: var(--color-neutral-0);
   background-color: transparent;
   border: 0;
   border-radius: var(--border-radius-button);
@@ -19,13 +19,6 @@
   }
 
   @include focus-ring-visible;
-
-  &:hover, &:focus { background-color: var(--bg-secondary-light); }
-
-  &:active {
-    color: var(--color-text-display);
-    background-color: var(--color-secondary-1);
-  }
 
   &:disabled, &[data-button-disabled="true"] {
     color: var(--color-text-disabled);

@@ -2,6 +2,11 @@
 
 .cart-toggle[data-store-icon-button] {
   position: relative;
+  padding: var(--space-2);
+  margin-left: var(--space-3);
+  color: var(--color-neutral-0);
+  border: 2px solid var(--color-neutral-0);
+  border-radius: var(--border-radius-circle);
 
   &::after {
     --cart-toggle-size: var(--space-3);
@@ -15,11 +20,16 @@
     min-width: var(--cart-toggle-size);
     height: var(--cart-toggle-size);
     padding: var(--space-0);
-    color: var(--color-text-inverse);
-    font-weight: var(--text-weight-bold);
     font-size: var(--text-size-0);
+    font-weight: var(--text-weight-bold);
+    color: var(--color-text-inverse);
     background: var(--bg-secondary-default);
     border-radius: var(--border-radius-pill);
-    content: attr(data-items);
+
+    // content: attr(data-items);
+  }
+
+  &:hover {
+    background-color: transparent;
   }
 }

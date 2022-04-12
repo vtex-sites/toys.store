@@ -12,6 +12,8 @@
 
 // Tokens ///////////////////////////
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   // Colors /////////////////////////
 
@@ -34,6 +36,11 @@
   --color-neutral-5: #74808b;
   --color-neutral-6: #5d666f;
   --color-neutral-7: #171a1c;
+  --color-theme-1: #8586db;
+  --color-theme-2: #000000;
+  --color-theme-3: #333056;
+  --color-theme-4: #8082db;
+  --color-theme-5: #de68d1;
 
   // State
   --color-success: #cee8de;
@@ -46,7 +53,7 @@
   --color-text-inverse: var(--color-neutral-0);
 
   // --bg-body: var(--color-neutral-0);
-  --bg-body: var(--color-primary-4);
+  --bg-body: var(--color-theme-3);
   --bg-primary-light: var(--color-primary-0);
   --bg-secondary-light: var(--color-secondary-0);
   --bg-neutral-light: var(--color-neutral-1);
@@ -87,6 +94,7 @@
 
   // Target Size
   --tap-min-size: 50px;
+  --svg-min-size: 40px;
 
   // Box-Shadows ////////////////////
   --box-shadow: 0 1px 4px rgb(0 0 0 / 10%), 0 6px 8px rgb(0 0 0 / 10%);
@@ -97,7 +105,8 @@
   --border-radius-flat: 0;
   --border-radius-small: .125rem;
   --border-radius-regular: .25rem;
-  --border-radius-pill: 60px;
+  --border-radius-pill: 100px;
+  --border-radius-input: 80px;
   --border-radius-circle: 100%;
 
   --border-radius-default: var(--border-radius-pill);

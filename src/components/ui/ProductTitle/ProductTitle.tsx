@@ -14,19 +14,45 @@ interface ProductTitleProp {
    * A text to be used below the title and the label, such as the product's reference number.
    */
   refNumber?: string
+  /**
+   * A text to use below the product name, such as the product brand.
+   */
+  brandName?: string
+  /**
+   * A text to be used below the product brand, with the short description.
+   */
+  description?: string
 }
 
-function ProductTitle({ title, label, refNumber }: ProductTitleProp) {
+function ProductTitle({
+  title,
+  label,
+  refNumber,
+  brandName,
+  description,
+}: ProductTitleProp) {
   return (
     <div className="product-title">
       <div className="product-title__header">
-        {title}
         {!!label && label}
+        {title}
       </div>
 
       {refNumber && (
         <div className="product-title__addendum / text-body-small">
           Ref.: {refNumber}
+        </div>
+      )}
+
+      {brandName && (
+        <div className="product-title__brandname / text-body-small">
+          Marca: {brandName}
+        </div>
+      )}
+
+      {description && (
+        <div className="product-title__shortdescription / text-body-small">
+          {description.substr(0, 300)}...
         </div>
       )}
     </div>

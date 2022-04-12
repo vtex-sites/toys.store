@@ -6,6 +6,7 @@ import SearchInput from 'src/components/common/SearchInput'
 import Icon from 'src/components/ui/Icon'
 import IconButton from 'src/components/ui/IconButton'
 import Link from 'src/components/ui/Link'
+import IncentivesHeader from 'src/components/sections/Incentives/IncentivesHeader'
 import Logo from 'src/components/ui/Logo'
 import SignInLink from 'src/components/ui/SignInLink'
 import SlideOver from 'src/components/ui/SlideOver'
@@ -39,8 +40,8 @@ function NavLinks({ onClickLink }: NavLinksProps) {
   `)
 
   return (
-    <nav className="navlinks__list">
-      <UIList>
+    <nav className="navlinks__list grid-content-full">
+      <UIList className="grid-content">
         {links.map(({ node: link }) => (
           <li key={link.seo.title}>
             <Link variant="display" to={`/${link.slug}`} onClick={onClickLink}>
@@ -67,6 +68,7 @@ function Navbar() {
 
   return (
     <header className="navbar / grid-content-full">
+      <IncentivesHeader />
       <div className="navbar__header / grid-content">
         <section className="navbar__row">
           {!searchExpanded && (
@@ -111,8 +113,8 @@ function Navbar() {
             <CartToggle />
           </div>
         </section>
-        <NavLinks />
       </div>
+      <NavLinks />
 
       <SlideOver
         isOpen={showMenu}

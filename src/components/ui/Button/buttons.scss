@@ -72,15 +72,14 @@
   }
 
   &[data-button-variant="tertiary"] {
-    min-height: 30px;
+    width: 40px;
+    height: 40px;
+    min-height: inherit;
     padding: 0;
-    color: var(--color-link);
-
-    &:hover, &:focus { text-decoration: underline; }
-
-    &:active {
-      color: var(--color-text-display);
-    }
+    color: var(--color-neutral-0);
+    background-color: transparent;
+    border: 2px solid var(--color-neutral-0);
+    border-radius: var(--border-radius-circle);
 
     &[data-button-inverse] {
       padding: 0 10px;
