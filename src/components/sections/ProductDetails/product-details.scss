@@ -1,6 +1,8 @@
 @import "src/styles/scaffold";
 
-.product-details { margin-top: var(--space-3); }
+.product-details {
+  margin-top: var(--space-3);
+}
 
 .product-details__body {
   display: flex;
@@ -25,22 +27,71 @@
   background-color: var(--color-neutral-0);
   border-radius: 30px;
 
-  [data-gatsby-image-wrapper] {
-    @include media(">=tablet") {
-      border-radius: var(--border-radius-default);
-      transform: translate3d(0, 0, 0);
+  &--mobile {
+    @include media(">notebook") {
+      display: none;
     }
   }
 
   @include media(">=tablet") {
     left: 0;
     grid-row: 1 / span 2;
-    grid-column: span 7;
+    grid-column: span 8;
     width: 100%;
     margin-bottom: var(--space-7);
   }
 
-  @include media(">=notebook") { grid-column: span 8; }
+  @include media("<tablet") {
+    width: 100%;
+    margin: 0 var(--space-3);
+    border-radius: 0;
+
+    &--desktop {
+      display: none;
+    }
+
+    [data-carousel-bullets] {
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: stretch;
+      align-items: center;
+      justify-content: center;
+      margin: var(--space-2) var(--space-1);
+
+      [data-store-bullets] {
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: stretch;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: fit-content;
+        height: 14px;
+        padding: 2px;
+        background: rgb(173 173 173 / 80%);
+        border-radius: 50px;
+      }
+
+      button {
+        width: 20px;
+        height: 10px;
+        background-color: transparent;
+        border: none;
+        border-radius: 50px;
+
+        &[aria-selected="true"] {
+          background: var(--color-neutral-0);
+        }
+      }
+    }
+  }
+
+  [data-gatsby-image-wrapper] {
+    @include media(">=tablet") {
+      border-radius: var(--border-radius-default);
+      transform: translate3d(0, 0, 0);
+    }
+  }
 
   img {
     height: auto;
@@ -83,16 +134,17 @@
 }
 
 .product-details__floatbuy {
+  box-sizing: border-box;
+  grid-column: 9 / span 4;
+  background: rgb(255 255 255 / 90%);
+  border: 1px solid rgb(51 48 86 / 40%);
+  border-radius: 30px;
+  backdrop-filter: blur(14px);
+
   @include media(">=notebook") {
     position: sticky;
     top: 20px;
     right: 0;
-    box-sizing: border-box;
-    grid-column: 9 / span 4;
-    background: rgb(255 255 255 / 90%);
-    border: 1px solid rgb(51 48 86 / 40%);
-    border-radius: 30px;
-    backdrop-filter: blur(14px);
   }
 }
 
@@ -105,25 +157,41 @@
     border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
   }
 
+
+
+  // &--mobile{
+  //   @include media(">=notebook") {
+  //     display: none;
+  //   }
+  // }
+
   @include media(">=notebook") { grid-column: 9 / span 4; }
 
-  .button.button-add-pdp[data-store-button] {
-    min-height: 16px;
-    padding: 0;
-    margin: 0 var(--space-5);
-    font-size: 13px;
+  .button.button-add-pdp {
+    &[data-store-button] {
+      min-height: 16px;
+      padding: 0;
+      margin: 0 var(--space-5);
+      font-size: 13px;
 
-    // font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    color: var(--color-theme-1);
-    cursor: pointer;
-    border: none;
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--color-theme-1);
+      cursor: pointer;
+      border: none;
 
-    &:hover, &:active, &:focus {
-      color: var(--color-theme-2);
-      background: transparent;
+      &:hover, &:active, &:focus {
+        color: var(--color-theme-2);
+        background: transparent;
+      }
+    }
+
+    &--desktop {
+      @include media("<notebook") {
+        display: none;
+      }
     }
   }
 }
@@ -156,6 +224,10 @@
     // border: 1px solid var(--color-border-display);
     // border-top: 0;
     border-radius: 0 0 var(--border-radius-default) var(--border-radius-default);
+  }
+
+  @include media("<tablet") {
+    padding: var(--space-3);
   }
 
   @include media(">=notebook") { grid-column: 9 / span 4; }

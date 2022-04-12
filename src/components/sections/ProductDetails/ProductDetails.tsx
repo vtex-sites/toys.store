@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import { DiscountBadge } from 'src/components/ui/Badge'
 import Breadcrumb from 'src/components/ui/Breadcrumb'
 import BuyButton from 'src/components/ui/BuyButton'
-import { Image } from 'src/components/ui/Image'
 import Button from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
 import Price from 'src/components/ui/Price'
@@ -17,6 +16,8 @@ import { useProduct } from 'src/sdk/product/useProduct'
 import type { ProductDetailsFragment_ProductFragment } from '@generated/graphql'
 import type { CurrencyCode, ViewItemEvent } from '@faststore/sdk'
 import type { AnalyticsItem } from 'src/sdk/analytics/types'
+import ProductImage from 'src/components/sections/ProductImage'
+import { Carousel } from '@faststore/ui'
 
 import Section from '../Section'
 
@@ -126,7 +127,7 @@ function ProductDetails({ product: staleProduct }: Props) {
             />
 
             <Button
-              buttonClass="button-add-pdp"
+              buttonClass="button-add-pdp button button-add-pdp--desktop"
               variant="secondary"
               icon={<Icon name="buttonSeemore" width={12} height={8} />}
               iconPosition="right"
@@ -135,6 +136,24 @@ function ProductDetails({ product: staleProduct }: Props) {
               saiba mais
             </Button>
           </header>
+
+          <section className="product-details__image product-details__image--mobile">
+            <Carousel
+              infiniteMode
+              controls="paginationBullets"
+              transition={{ duration: 400, property: 'transform' }}
+            >
+              {productImages.map((singleImage, index) => {
+                return (
+                  <ProductImage
+                    image={singleImage.url}
+                    alt={singleImage.alternateName}
+                    key={index}
+                  />
+                )
+              })}
+            </Carousel>
+          </section>
 
           <section className="product-details__settings">
             <section className="product-details__values">
@@ -181,17 +200,12 @@ function ProductDetails({ product: staleProduct }: Props) {
           </section>
         </section>
 
-        <section className="product-details__image">
-          {productImages.map((productImage, index) => {
+        <section className="product-details__image product-details__image--desktop">
+          {productImages.map((singleImage, index) => {
             return (
-              <Image
-                preload
-                loading="eager"
-                src={productImage.url}
-                alt={productImage.alternateName}
-                width={802}
-                height={802}
-                sizes="(max-width: 768px) 25vw, 50vw"
+              <ProductImage
+                image={singleImage.url}
+                alt={singleImage.alternateName}
                 key={index}
               />
             )

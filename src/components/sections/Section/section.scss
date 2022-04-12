@@ -14,5 +14,10 @@
     font-weight: 500;
     line-height: 37px;
     color: var(--color-neutral-0);
+
+    @include media("<tablet") {
+      font-size: 22px;
+      line-height: 27px;
+    }
   }
 }
