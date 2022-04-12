@@ -48,6 +48,18 @@
       color: #ffffff;
     }
 
+    &__desktop {
+      @include media("<notebook") {
+        display: none;
+      }
+    }
+
+    &__mobile {
+      @include media(">=notebook") {
+        display: none;
+      }
+    }
+
     article {
       float: left;
       width: 40%;
