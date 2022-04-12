@@ -103,7 +103,7 @@ function Page(props: Props) {
       <ProductShelf
         first={ITEMS_PER_SECTION}
         term={product.brand.name}
-        title="You might also like"
+        title="Você também pode curtir"
         withDivisor
       />
     </>

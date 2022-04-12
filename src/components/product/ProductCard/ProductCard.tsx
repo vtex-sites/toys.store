@@ -65,6 +65,13 @@ function ProductCard({
         />
       </UICardImage>
       <UICardContent>
+        {outOfStock ? (
+          <Badge small variant="neutral">
+            Out of stock
+          </Badge>
+        ) : (
+          <DiscountBadge small listPrice={listPrice} spotPrice={spotPrice} />
+        )}
         <div className="product-card__heading">
           <h3 className="product-card__title / title-small">
             <Link {...linkProps} title={name}>
@@ -92,14 +99,6 @@ function ProductCard({
             />
           </div>
         </div>
-
-        {outOfStock ? (
-          <Badge small variant="neutral">
-            Out of stock
-          </Badge>
-        ) : (
-          <DiscountBadge small listPrice={listPrice} spotPrice={spotPrice} />
-        )}
       </UICardContent>
       {!!buyButton && <UICardActions>{buyButton}</UICardActions>}
     </UICard>

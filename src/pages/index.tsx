@@ -10,9 +10,10 @@ import VirtualConsultant from 'src/components/sections/VirtualConsultant'
 import Hero from 'src/components/sections/Hero'
 import Skills from 'src/components/sections/Skills'
 import Newsletter from 'src/components/sections/Newsletter'
-import NewProducts from 'src/components/sections/NewProducts'
 import BannerText from 'src/components/sections/BannerText'
 import FavoriteProducts from 'src/components/sections/FavoriteProducts'
+import ProductShelf from 'src/components/sections/ProductShelf'
+import { ITEMS_PER_SECTION } from 'src/constants'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -176,9 +177,11 @@ function Page(props: Props) {
           ex, quis dictum
         </p>
       </VirtualConsultant>
-      <NewProducts>
-        <h3>Novidades</h3>
-      </NewProducts>
+      <ProductShelf
+        first={ITEMS_PER_SECTION}
+        sort="score_desc"
+        title="Novidades"
+      />
       <BannerText
         title="Get to know our next realease"
         caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."
