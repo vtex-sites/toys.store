@@ -74,7 +74,8 @@
   &[data-button-variant="tertiary"] {
     min-height: 30px;
     padding: 0;
-    color: var(--color-link);
+    font-size: 14px;
+    color: #ffffff;
 
     &:hover, &:focus { text-decoration: underline; }
 
