@@ -4,11 +4,11 @@
   align-items: stretch;
   width: fit-content;
   height: fit-content;
-  color: var(--color-text);
-  font-weight: var(--text-weight-bold);
   font-size: var(--text-size-2);
-  white-space: nowrap;
+  font-weight: var(--text-weight-bold);
+  color: var(--color-text);
   text-transform: uppercase;
+  white-space: nowrap;
   border-radius: var(--border-radius-pill);
 
   > span {
@@ -18,8 +18,17 @@
   &[data-store-badge="small"] {
     font-size: var(--text-size-0);
 
+    @include media(">notebook") {
+      font-size: 12px;
+      background-color: rgb(241 242 243 / 30%);
+    }
+
     > span {
       padding: var(--space-0) var(--space-2);
+
+      @include media(">notebook") {
+        color: #ffffff;
+      }
     }
   }
 
@@ -46,7 +55,7 @@
 }
 
 [data-store-badge-variant="info"] {
-  background-color: var(--bg-info);
+  background-color: var(--color-theme-5);
 }
 
 [data-store-discount-badge-variant="low"] {

@@ -9,26 +9,26 @@ function EmptyGallery() {
       <header>
         <Icon name="CircleWavyWarning" width={56} height={56} weight="thin" />
 
-        <p>Nothing matches with your search</p>
+        <p>Não encontramo snada com a combinação do termo pesquisado</p>
       </header>
 
       <LinkButton
-        to="/office"
+        to="/produtos/brinquedos"
         variant="secondary"
         icon={
           <Icon name="CircleWavyWarning" width={18} height={18} weight="bold" />
         }
         iconPosition="left"
       >
-        Browse Offers
+        Nossos brinquedos
       </LinkButton>
       <LinkButton
-        to="/technology"
+        to="/produtos/kit-praia"
         variant="secondary"
         icon={<Icon name="RocketLaunch" width={18} height={18} weight="bold" />}
         iconPosition="left"
       >
-        Just Arrived
+        Kit praia
       </LinkButton>
     </EmptyState>
   )

@@ -19,7 +19,21 @@
     }
   }
 
+  @include media("<notebook") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   li {
-    background-color: var(--color-neutral-0);
+    background-color: #33305633;
+
+    @include media("<notebook") {
+      min-width: inherit;
+      max-width: 45%;
+      margin-bottom: 18px;
+      overflow: hidden;
+      background-color: inherit;
+    }
   }
 }

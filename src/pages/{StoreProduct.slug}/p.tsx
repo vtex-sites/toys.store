@@ -15,6 +15,9 @@ import type {
   ProductPageQueryQueryVariables,
 } from '@generated/graphql'
 import { ITEMS_PER_SECTION } from 'src/constants'
+import ScrollToTopButton from 'src/components/sections/ScrollToTopButton'
+import Newsletter from 'src/components/sections/Newsletter'
+import NewProducts from 'src/components/sections/NewProducts'
 
 export type Props = PageProps<
   ProductPageQueryQuery,
@@ -100,12 +103,23 @@ function Page(props: Props) {
 
       <ProductDetails product={product} />
 
-      <ProductShelf
-        first={ITEMS_PER_SECTION}
-        term={product.brand.name}
-        title="You might also like"
-        withDivisor
+      <NewProducts>
+        <ProductShelf
+          first={ITEMS_PER_SECTION}
+          term={product.brand.name}
+          title="Quem comprou, comprou também"
+          withDivisor
+        />
+      </NewProducts>
+
+      <Newsletter
+        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        onSubmit={() => {
+          //
+        }}
       />
+
+      <ScrollToTopButton />
     </>
   )
 }

@@ -1,11 +1,6 @@
 import React from 'react'
-import UIHero, {
-  HeroContent,
-  HeroImage,
-  HeroLink,
-} from 'src/components/ui/Hero'
-import Image from 'src/components/ui/Image/Image'
-import { LinkButton } from 'src/components/ui/Button'
+import UIHero, { HeroCard, HeroContent, HeroLink } from 'src/components/ui/Hero'
+import Button, { LinkButton } from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
 
 import Section from '../Section'
@@ -16,8 +11,9 @@ interface HeroProps {
   title: string
   subtitle: string
   variant?: Variant
-  linkText?: string
-  link?: string
+  mainLinkText?: string
+  mainLink?: string
+  secondaryLinkText?: string
   icon?: JSX.Element
   imageSrc: string
   imageAlt: string
@@ -27,8 +23,9 @@ const Hero = ({
   title,
   subtitle,
   variant = 'default',
-  linkText,
-  link,
+  mainLinkText,
+  mainLink,
+  secondaryLinkText,
   icon,
   imageAlt,
   imageSrc,
@@ -49,28 +46,74 @@ const Hero = ({
               </h1>
 
               <p className="text-body-big">{subtitle}</p>
-              {!!link && (
-                <HeroLink>
-                  <LinkButton to={link} inverse>
-                    {linkText} <Icon name="ArrowRight" width={24} height={24} />
-                  </LinkButton>
-                </HeroLink>
-              )}
+              <div className="hero-content-info__buttons">
+                {!!mainLink && (
+                  <HeroLink>
+                    <LinkButton to={mainLink} variant="secondary">
+                      {mainLinkText}
+                      <Icon name="ArrowRight" width={20} height={20} />
+                    </LinkButton>
+                  </HeroLink>
+                )}
+                <Button
+                  variant="primary"
+                  onClick={() => {
+                    const sectionRef = document.querySelector('.frn-consultant')
+
+                    if (sectionRef) {
+                      sectionRef.scrollIntoView()
+                    }
+                  }}
+                >
+                  {secondaryLinkText}
+                </Button>
+              </div>
+            </div>
+            <div className="hero-content-mosaic">
+              <div className="hero-content-mosaic__main-card hero-content-mosaic__card">
+                <HeroCard
+                  imageSrc={imageSrc}
+                  imageAlt={imageAlt}
+                  size="large"
+                  title="Brinquedos de até R$100"
+                  link="/produtos/brinquedos"
+                  linkText="ver todos"
+                  icon
+                />
+              </div>
+              <div className="hero-content-mosaic__secondary-cards">
+                <div className=" hero-content-mosaic__card">
+                  <HeroCard
+                    size="medium"
+                    title="Para jogar com a galera"
+                    link="/produtos/brinquedos"
+                    linkText="ver todos"
+                    icon
+                  />
+                </div>
+                <div className=" hero-content-mosaic__card">
+                  <HeroCard
+                    size="small"
+                    title="Jogos individuais"
+                    link="/produtos/brinquedos"
+                    linkText="ver todos"
+                    icon
+                  />
+                </div>
+                <div className=" hero-content-mosaic__card">
+                  <HeroCard
+                    size="small"
+                    title="Promoções incríveis"
+                    link="/produtos/brinquedos"
+                    linkText="ver todos"
+                    icon
+                  />
+                </div>
+              </div>
             </div>
             {!!icon && <div className="hero-content-icon">{icon}</div>}
           </div>
         </HeroContent>
-        <HeroImage>
-          <Image
-            preload
-            loading="eager"
-            src={imageSrc}
-            alt={imageAlt}
-            width={360}
-            height={240}
-            sizes="(max-width: 768px) 70vw, 50vw"
-          />
-        </HeroImage>
       </UIHero>
     </Section>
   )

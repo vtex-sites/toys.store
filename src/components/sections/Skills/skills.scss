@@ -1,0 +1,95 @@
+.frn-skills {
+  background: transparent;
+
+  &__grid-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--page-padding-notebook);
+    padding-bottom: var(--page-padding-notebook);
+  }
+
+  &__grid-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @include media("<notebook") {
+      width: 100%;
+    }
+
+    @include media(">=notebook") {
+      width: 32%;
+    }
+
+    &__mobile-none {
+      @include media("<notebook") {
+        display: none;
+      }
+    }
+  }
+
+  &__skill {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  &__children {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+    order: 0;
+    width: 100%;
+    padding: 0;
+    margin: 33px 0;
+    text-align: center;
+
+    @include media("<notebook") {
+      margin: 0;
+    }
+
+    @include media(">=notebook") {
+      max-width: 420px;
+    }
+
+    h3 {
+      flex: none;
+      flex-grow: 0;
+      order: 0;
+      font-size: 32px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 39px;
+      color: #ffffff;
+
+      .lastWord {
+        color: var(--color-link);
+      }
+    }
+
+    p {
+      flex: none;
+      flex-grow: 0;
+      order: 1;
+      padding: 0 20px;
+      margin: 15px 0;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+
+  [data-store-button] {
+    border-radius: 60px;
+  }
+}

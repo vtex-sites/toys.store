@@ -3,11 +3,9 @@ import { graphql } from 'gatsby'
 import { BreadcrumbJsonLd, GatsbySeo } from 'gatsby-plugin-next-seo'
 import React, { useMemo } from 'react'
 import Breadcrumb from 'src/components/sections/Breadcrumb'
-import Hero from 'src/components/sections/Hero'
 import ProductGallery from 'src/components/sections/ProductGallery'
 import ProductShelf from 'src/components/sections/ProductShelf'
 import ScrollToTopButton from 'src/components/sections/ScrollToTopButton'
-import Icon from 'src/components/ui/Icon'
 import { ITEMS_PER_PAGE, ITEMS_PER_SECTION } from 'src/constants'
 import { applySearchState } from 'src/sdk/search/state'
 import { mark } from 'src/sdk/tests/mark'
@@ -17,6 +15,7 @@ import type {
 } from '@generated/graphql'
 import type { PageProps } from 'gatsby'
 import type { SearchState } from '@faststore/sdk'
+import HeaderBanner from 'src/components/sections/HeaderBanner'
 
 type Props = PageProps<
   CollectionPageQueryQuery,
@@ -104,13 +103,11 @@ function Page(props: Props) {
         name={title}
       />
 
-      <Hero
-        variant="small"
+      <HeaderBanner
         title={title}
-        subtitle={`All the amazing ${title} from the brands we partner with.`}
-        imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
-        imageAlt="Quest 2 Controller on a table"
-        icon={<Icon name="Headphones" width={48} height={48} weight="thin" />}
+        subtitle="Os melhores produtos das melhores marcas com as quais fazemos parceria."
+        imageAlt="Banner do Header"
+        imageSrc="/HeaderBanner.webp"
       />
 
       <ProductGallery title={title} />
@@ -118,7 +115,7 @@ function Page(props: Props) {
       <ProductShelf
         first={ITEMS_PER_SECTION}
         sort="score_desc"
-        title="You might also like"
+        title="Você também vai gostar"
         withDivisor
       />
 
