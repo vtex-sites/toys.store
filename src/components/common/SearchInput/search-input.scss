@@ -19,6 +19,10 @@
     transition: box-shadow .2s ease, border .2s ease;
   }
 
+  ::placeholder {
+    color: var(--color-white-transparent-50);
+  }
+
   [data-store-icon] {
     display: block;
   }
