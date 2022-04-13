@@ -1,4 +1,5 @@
 import React from 'react'
+import type { PropsWithChildren } from 'react'
 import { LinkButton } from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
 
@@ -6,7 +7,10 @@ interface Props {
   className?: string
 }
 
-function FavoriteProducts({ className = '' }: Props) {
+function FavoriteProducts({
+  children,
+  className = '',
+}: PropsWithChildren<Props>) {
   return (
     <section className={`section frn-favoriteProducts ${className}`}>
       <div className="frn-favoriteProducts__grid-content">
@@ -22,7 +26,7 @@ function FavoriteProducts({ className = '' }: Props) {
             ver todos <Icon name="ArrowRight" width={20} height={20} />
           </LinkButton>
         </div>
-        <div className="frn-favoriteProducts__productShelf" />
+        <div className="frn-favoriteProducts__productShelf">{children}</div>
       </div>
     </section>
   )
