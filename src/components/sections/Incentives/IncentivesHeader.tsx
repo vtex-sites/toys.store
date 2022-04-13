@@ -3,6 +3,14 @@ import Icon from 'src/components/ui/Icon'
 
 import Incentives from './Incentives'
 
+interface FrnCarousel {
+  controls?: 'complete' | 'navigationArrows' | 'paginationBullets'
+  transition: {
+    duration: number
+    property: string
+  }
+}
+
 const incentives = [
   {
     icon: <Icon name="Truck" width={32} height={32} />,
@@ -31,7 +39,7 @@ const incentives = [
   },
 ]
 
-const carousel = {
+const carousel: FrnCarousel = {
   controls: 'navigationArrows',
   transition: {
     duration: 400,

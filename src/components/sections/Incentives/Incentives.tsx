@@ -16,7 +16,7 @@ interface Incentive {
 }
 
 interface FrnCarousel {
-  controls: string
+  controls?: 'complete' | 'navigationArrows' | 'paginationBullets'
   transition: {
     duration: number
     property: string
