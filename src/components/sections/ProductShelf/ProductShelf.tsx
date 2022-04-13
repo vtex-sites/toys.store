@@ -32,7 +32,7 @@ function ProductShelf({
       <h2 className="title-section / grid-content">{title}</h2>
       <div className="page__section-content">
         <ProductShelfSkeleton loading={products === undefined}>
-          <CarouselShelf itensPerPageSlider={5}>
+          <CarouselShelf itensPerPageSlider={4} controls="navigationArrows">
             {products?.edges.map((product, idx) => (
               <li key={`${product.node.id}`}>
                 <ProductCard product={product.node} index={idx + 1} />

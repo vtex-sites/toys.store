@@ -26,6 +26,25 @@ main {
       margin-top: calc(-1 * var(--space-0));
       margin-bottom: calc(-1 * var(--space-3));
     }
+
+    [data-carousel-controls] {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: stretch;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: -25px;
+
+      [data-store-button] {
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+    }
   }
 }
 
