@@ -17,7 +17,6 @@ import type { ProductDetailsFragment_ProductFragment } from '@generated/graphql'
 import type { CurrencyCode, ViewItemEvent } from '@faststore/sdk'
 import type { AnalyticsItem } from 'src/sdk/analytics/types'
 import ProductImage from 'src/components/sections/ProductImage'
-import { Carousel } from '@faststore/ui'
 
 import Section from '../Section'
 
@@ -138,21 +137,7 @@ function ProductDetails({ product: staleProduct }: Props) {
           </header>
 
           <section className="product-details__image product-details__image--mobile">
-            <Carousel
-              infiniteMode
-              controls="paginationBullets"
-              transition={{ duration: 400, property: 'transform' }}
-            >
-              {productImages.map((singleImage, index) => {
-                return (
-                  <ProductImage
-                    image={singleImage.url}
-                    alt={singleImage.alternateName}
-                    key={index}
-                  />
-                )
-              })}
-            </Carousel>
+            <ProductImage images={productImages} carousel />
           </section>
 
           <section className="product-details__settings">
@@ -201,15 +186,7 @@ function ProductDetails({ product: staleProduct }: Props) {
         </section>
 
         <section className="product-details__image product-details__image--desktop">
-          {productImages.map((singleImage, index) => {
-            return (
-              <ProductImage
-                image={singleImage.url}
-                alt={singleImage.alternateName}
-                key={index}
-              />
-            )
-          })}
+          <ProductImage images={productImages} />
         </section>
 
         <section className="product-details__content" ref={myRef}>
