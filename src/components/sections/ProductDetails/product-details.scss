@@ -123,6 +123,10 @@
       line-height: 27px;
       color: var(--color-neutral-0);
     }
+
+    @include media("<notebook") {
+      background: rgb(34 31 65 / 40%);
+    }
   }
 
   @include media(">=tablet") {
@@ -181,8 +185,9 @@
       border: none;
 
       &:hover, &:active, &:focus {
-        color: var(--color-theme-2);
-        background: transparent;
+        color: var(--color-theme-1);
+        background-color: transparent;
+        border: 0;
       }
     }
 
@@ -202,14 +207,17 @@
     &:last-of-type { margin-bottom: var(--space-7); }
   }
 
-  [data-store-buy-button] { width: 100%; }
+  [data-store-buy-button] {
+    width: 100%;
+  }
 
   .price[data-store-price] {
     display: block;
 
     &[data-variant="spot"] {
       margin: 0;
-      margin-left: var(--space-2);
+
+      // margin-left: var(--space-2);
       font-weight: var(--text-weight-black);
     }
   }

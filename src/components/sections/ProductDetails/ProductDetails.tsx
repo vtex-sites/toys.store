@@ -128,7 +128,7 @@ function ProductDetails({ product: staleProduct }: Props) {
             <Button
               buttonClass="button-add-pdp button button-add-pdp--desktop"
               variant="secondary"
-              icon={<Icon name="buttonSeemore" width={12} height={8} />}
+              icon={<Icon name="CaretDown" width={14} height={14} />}
               iconPosition="right"
               onClick={() => handleScrollToElement(myRef)}
             >
@@ -143,15 +143,17 @@ function ProductDetails({ product: staleProduct }: Props) {
           <section className="product-details__settings">
             <section className="product-details__values">
               <div className="product-details__prices">
-                <Price
-                  value={listPrice}
-                  formatter={useFormattedPrice}
-                  testId="list-price"
-                  data-value={listPrice}
-                  variant="listing"
-                  classes="text-body-small"
-                  SRText="De:"
-                />
+                {listPrice > lowPrice && (
+                  <Price
+                    value={listPrice}
+                    formatter={useFormattedPrice}
+                    testId="list-price"
+                    data-value={listPrice}
+                    variant="listing"
+                    classes="text-body-small"
+                    SRText="De:"
+                  />
+                )}
                 <Price
                   value={lowPrice}
                   formatter={useFormattedPrice}
@@ -191,7 +193,7 @@ function ProductDetails({ product: staleProduct }: Props) {
 
         <section className="product-details__content" ref={myRef}>
           <article className="product-details__description">
-            <h2 className="title-subsection">Description</h2>
+            <h2 className="title-subsection">Descrição</h2>
             <p className="text-body">{description}</p>
           </article>
         </section>

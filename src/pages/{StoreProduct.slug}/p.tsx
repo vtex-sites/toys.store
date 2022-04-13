@@ -16,6 +16,7 @@ import type {
 } from '@generated/graphql'
 import { ITEMS_PER_SECTION } from 'src/constants'
 import ScrollToTopButton from 'src/components/sections/ScrollToTopButton'
+import Newsletter from 'src/components/sections/Newsletter'
 
 export type Props = PageProps<
   ProductPageQueryQuery,
@@ -106,6 +107,13 @@ function Page(props: Props) {
         term={product.brand.name}
         title="Quem comprou, comprou também"
         withDivisor
+      />
+
+      <Newsletter
+        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        onSubmit={() => {
+          //
+        }}
       />
 
       <ScrollToTopButton />
