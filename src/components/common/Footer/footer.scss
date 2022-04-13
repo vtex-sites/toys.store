@@ -1,10 +1,15 @@
 @import "src/styles/scaffold";
 
 .footer {
-  background-color: var(--bg-neutral-light);
+  background-color: var(--bg-neutral-lightest);
 
   .incentives {
     padding-top: 0;
+
+    @include media(">=notebook") {
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
 
   content-visibility: auto;
@@ -159,8 +164,9 @@
 
 .footer__copyright {
   width: 434px;
-  height: 54px;
   margin: 0 -32px;
+
+  @include media(">=notebook") { height: 54px; }
 
   p {
     margin: var(--space-2) auto;
