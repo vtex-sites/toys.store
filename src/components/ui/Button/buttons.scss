@@ -23,7 +23,8 @@
 
   &[data-button-variant="primary"] {
     min-height: var(--tap-min-size);
-    padding: 13px 27px;
+    max-height: var(--tap-min-size);
+    padding: 0 20px;
     color: var(--color-text-inverse);
     background-color: var(--bg-secondary-default);
 

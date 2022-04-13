@@ -31,22 +31,22 @@ const virtualConsultantJson = [
       {
         title: '0-2 anos',
         values: '0-2 anos',
-        maps: 'specificationFilter_10',
+        maps: 'specificationFilter_18',
       },
       {
         title: '3-6 anos',
         values: '3-6 anos',
-        maps: 'specificationFilter_10',
+        maps: 'specificationFilter_18',
       },
       {
         title: '7-10 anos',
         values: '7-10 anos',
-        maps: 'specificationFilter_10',
+        maps: 'specificationFilter_18',
       },
       {
         title: '+11 anos',
         values: '+11 anos',
-        maps: 'specificationFilter_10',
+        maps: 'specificationFilter_18',
       },
     ],
   },
@@ -56,17 +56,17 @@ const virtualConsultantJson = [
       {
         title: 'Menino',
         values: 'Menino',
-        maps: 'specificationFilter_11',
+        maps: 'specificationFilter_19',
       },
       {
         title: 'Menina',
         values: 'Menina',
-        maps: 'specificationFilter_11',
+        maps: 'specificationFilter_19',
       },
       {
-        title: 'Para ambos',
-        values: 'Ambos',
-        maps: 'specificationFilter_11',
+        title: 'Meninx',
+        values: 'Meninx',
+        maps: 'specificationFilter_19',
       },
     ],
   },
@@ -148,9 +148,8 @@ function Page(props: Props) {
       <Hero
         title="Lorem Ipsum Dolor Sit Amet, Consectetur"
         subtitle="Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis ex, quis dictum arcu arcu nec orci. Praesent rutrum mattis nisi."
-        mainLink="/"
+        mainLink="/produtos/brinquedos"
         mainLinkText="ver todos"
-        secondaryLink="/"
         secondaryLinkText="encontre o presente ideal"
         imageAlt="oi"
         imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
@@ -181,7 +180,7 @@ function Page(props: Props) {
       <BannerText
         title="Get to know our next realease"
         caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."
-        actionPath="/"
+        actionPath="/produtos/brinquedos"
         actionLabel="call to action"
       />
       <Skills skills={skillsArray}>

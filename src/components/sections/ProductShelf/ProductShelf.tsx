@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ProductShelfSkeleton from 'src/components/skeletons/ProductShelfSkeleton'
 import { useProductsQuery } from 'src/sdk/product/useProductsQuery'
 import type { ProductsQueryQueryVariables } from '@generated/graphql'
@@ -18,6 +18,23 @@ function ProductShelf({
   ...variables
 }: ProductShelfProps) {
   const products = useProductsQuery(variables)
+  const [isDesktop, setDesktop] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setDesktop(window.innerWidth > 768)
+    }
+  }, [])
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 768)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia)
+
+    return () => window.removeEventListener('resize', updateMedia)
+  })
 
   if (products?.edges.length === 0) {
     return null
@@ -32,7 +49,10 @@ function ProductShelf({
       <h2 className="title-section / grid-content">{title}</h2>
       <div className="page__section-content">
         <ProductShelfSkeleton loading={products === undefined}>
-          <CarouselShelf itensPerPageSlider={4} controls="navigationArrows">
+          <CarouselShelf
+            itensPerPageSlider={isDesktop ? 4 : 1}
+            controls="navigationArrows"
+          >
             {products?.edges.map((product, idx) => (
               <li key={`${product.node.id}`}>
                 <ProductCard product={product.node} index={idx + 1} />

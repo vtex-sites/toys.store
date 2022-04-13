@@ -73,6 +73,7 @@
 
       @include media(">=notebook") {
         flex-direction: row;
+        align-items: baseline;
         justify-content: space-between;
         width: 80%;
       }
@@ -81,7 +82,7 @@
     [data-hero-link] {
       margin-top: 23px;
 
-      a {
+      a, button {
         box-sizing: border-box;
         padding: 13px 27px;
         font-size: 14px;

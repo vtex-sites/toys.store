@@ -87,12 +87,12 @@
   }
 
   [data-card-content] a[href] {
-    height: 35px;
-    min-height: 35px;
-    max-height: 35px;
+    min-height: 60px;
+    max-height: var(--space-6);
     padding: 0;
     font-size: 0.875rem;
     font-weight: 400;
+    line-height: 1.2;
     color: #ffffff;
     text-decoration: none;
     outline: none;

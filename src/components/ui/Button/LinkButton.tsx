@@ -29,6 +29,7 @@ function LinkButton({
       innerRef={linkRef}
       data-store-button
       className={`link-button ${className}`}
+      aria-label="Realizar o login"
       data-button-variant={variant}
       data-button-inverse={inverse}
       data-button-disabled={disabled}
