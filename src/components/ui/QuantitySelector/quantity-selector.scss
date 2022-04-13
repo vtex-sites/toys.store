@@ -46,7 +46,9 @@
   [data-store-icon] {
     margin: 0;
     line-height: 0;
-    color: var(--color-border-input-selected);
+
+    // color: var(--color-border-input-selected);
+    color: #8082db;
   }
 
   [data-quantity-selector-input] {
