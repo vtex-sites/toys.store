@@ -92,9 +92,9 @@ function Footer() {
               // className="footer__logo"
               src="/Logo.png"
               alt="VTEX logo"
-              width="150px;"
+              width="150"
               // margin="-31px 0 0px -42px;"
-              height="124.7px;"
+              height="124.7"
               loading="lazy"
             />
           }
