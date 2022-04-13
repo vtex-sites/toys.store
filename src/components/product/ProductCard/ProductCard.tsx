@@ -79,15 +79,17 @@ function ProductCard({
             </Link>
           </h3>
           <div className="product-card__prices">
-            <Price
-              value={listPrice}
-              formatter={useFormattedPrice}
-              testId="list-price"
-              data-value={listPrice}
-              variant="listing"
-              classes="text-body-small"
-              SRText="Original price:"
-            />
+            {listPrice > spotPrice && (
+              <Price
+                value={listPrice}
+                formatter={useFormattedPrice}
+                testId="list-price"
+                data-value={listPrice}
+                variant="listing"
+                classes="text-body-small"
+                SRText="Original price:"
+              />
+            )}
             <Price
               value={spotPrice}
               formatter={useFormattedPrice}
