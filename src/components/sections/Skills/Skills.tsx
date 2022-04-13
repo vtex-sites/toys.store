@@ -30,15 +30,15 @@ function Skills({
         </div>
         <div className="frn-skills__children">{children}</div>
         <div className="frn-skills__grid-skills">
-          {skills?.map((skill, index) => (
+          {skills?.map((skill2, index2) => (
             <LinkButton
               className="frn-skills__skill"
               to="/"
               variant="tertiary"
-              key={String(index)}
+              key={String(index2)}
               inverse
             >
-              {skill}
+              {skill2}
             </LinkButton>
           ))}
         </div>
