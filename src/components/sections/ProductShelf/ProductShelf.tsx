@@ -2,6 +2,7 @@ import React from 'react'
 import ProductShelfSkeleton from 'src/components/skeletons/ProductShelfSkeleton'
 import { useProductsQuery } from 'src/sdk/product/useProductsQuery'
 import type { ProductsQueryQueryVariables } from '@generated/graphql'
+import CarouselShelf from 'src/components/common/CarouselShelf'
 
 import ProductCard from '../../product/ProductCard'
 import Section from '../Section'
@@ -31,13 +32,14 @@ function ProductShelf({
       <h2 className="title-section / grid-content">{title}</h2>
       <div className="page__section-content">
         <ProductShelfSkeleton loading={products === undefined}>
-          <ul data-product-shelf className="grid-content">
+          <CarouselShelf itensPerPageSlider={5}>
             {products?.edges.map((product, idx) => (
               <li key={`${product.node.id}`}>
                 <ProductCard product={product.node} index={idx + 1} />
               </li>
             ))}
-          </ul>
+          </CarouselShelf>
+          {/* <ul data-product-shelf className="grid-content"></ul> */}
         </ProductShelfSkeleton>
       </div>
     </Section>

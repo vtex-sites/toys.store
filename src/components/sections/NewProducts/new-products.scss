@@ -19,7 +19,9 @@
     align-items: center;
     justify-content: center;
     order: 0;
-    max-width: 420px;
+
+    // max-width: 420px;
+
     padding: 0;
     text-align: center;
 
@@ -48,6 +50,10 @@
       font-weight: 500;
       line-height: 20px;
       color: #ffffff;
+    }
+
+    section {
+      max-width: 1280px;
     }
   }
 
