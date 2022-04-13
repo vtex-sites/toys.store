@@ -36,17 +36,17 @@ function ProductImage({ images, carousel }: Props) {
           })}
         </Carousel>
       ) : (
-        images.map((singleImage, index) => {
+        images.map((singleImage2, index2) => {
           return (
             <Image
               preload
               loading="eager"
-              src={singleImage.url}
-              alt={singleImage.alternateName}
+              src={singleImage2.url}
+              alt={singleImage2.alternateName}
               width={802}
               height={802}
               sizes="(max-width: 768px) 25vw, 50vw"
-              key={index}
+              key={index2}
             />
           )
         })
