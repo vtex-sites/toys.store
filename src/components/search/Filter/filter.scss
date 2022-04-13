@@ -1,6 +1,11 @@
 @import "src/styles/scaffold";
 
 .filter[data-store-filter] {
+  @include media(">notebook") {
+    font-size: 14px;
+    color: rgb(255 255 255 / 50%);
+  }
+
   > .title-small {
     display: flex;
     align-items: center;
@@ -22,18 +27,25 @@
     }
 
     @include media(">=notebook") {
-      border: 1px solid var(--color-border-display);
-      border-radius: var(--border-radius-default);
+      // border: 1px solid var(--color-border-display);
+      // border-radius: var(--border-radius-default);
     }
   }
 
+  [data-accordion-item] {
+    padding-bottom: 10px;
+  }
+
   [data-accordion-item] [data-store-button] {
-    font-weight: var(--text-weight-regular);
     font-size: var(--text-size-3);
+    font-weight: var(--text-weight-regular);
     line-height: 1.5;
 
     @include media(">=notebook") {
-      font-size: var(--text-size-2);
+      padding: 16px 0;
+      font-family: var(--sans-serif);
+      font-size: 20px;
+      font-weight: 700;
       line-height: 1.25;
     }
 
@@ -57,8 +69,13 @@
 
   [data-store-checkbox] {
     flex-shrink: 0;
-    width: rem(20px);
-    height: rem(20px);
+
+    @include media(">notebook") {
+      width: rem(15px);
+      height: rem(15px);
+      border-color: #ffffff;
+      border-radius: 5px;
+    }
   }
 
   [data-store-label] {
@@ -66,10 +83,22 @@
     align-items: center;
     width: 100%;
     margin-left: var(--space-1);
+
+    @include media(">notebook") {
+      margin-left: 13px;
+    }
   }
 
   [data-store-badge] {
     margin-left: var(--space-1);
+
+    @include media(">notebook") {
+      margin-left: 15px;
+
+      span {
+        font-weight: 500;
+      }
+    }
   }
 }
 

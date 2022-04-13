@@ -7,7 +7,9 @@
 
   label {
     margin-right: var(--space-1);
-    color: var(--color-text-subtle);
+    color: rgb(255 255 255 / 50%);
+
+    // color: var(--color-text-subtle);
   }
 
   [data-store-select] {
@@ -16,15 +18,29 @@
     background: transparent;
     border: 0;
     border-radius: var(--border-radius-default);
+    outline: 0;
     box-shadow: 0;
     transition: box-shadow .2s ease, background-color .2s ease;
     appearance: none;
 
-    @include focus-ring-visible;
+    // @include focus-ring-visible;
 
-    &:focus { background-color: var(--bg-secondary-light); }
+    option {
+      color: var(--color-text);
+    }
 
-    &:hover:not(:disabled) { background-color: var(--bg-secondary-light); }
+    // &:focus {
+    //   option{
+    //     &:nth-child(1){
+    //       background-color: transparent;
+    //       color: red;
+    //     }
+    //     background-color: var(--bg-secondary-light);
+    //     color: var(--color-text);
+    //   }
+    // }
+
+    // &:hover:not(:disabled) { background-color: var(--bg-secondary-light); }
 
     &:disabled {
       color: var(--color-text-disabled);

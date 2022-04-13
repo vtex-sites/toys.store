@@ -6,10 +6,10 @@
   height: fit-content;
   font-size: var(--text-size-2);
   font-weight: var(--text-weight-bold);
-  color: var(--color-neutral-0);
+  color: var(--color-text);
   text-transform: uppercase;
   white-space: nowrap;
-  border-radius: var(--border-radius-regular);
+  border-radius: var(--border-radius-pill);
 
   > span {
     padding: var(--space-1) var(--space-2);
@@ -18,8 +18,17 @@
   &[data-store-badge="small"] {
     font-size: var(--text-size-0);
 
+    @include media(">notebook") {
+      font-size: 12px;
+      background-color: rgb(241 242 243 / 30%);
+    }
+
     > span {
       padding: var(--space-0) var(--space-2);
+
+      @include media(">notebook") {
+        color: #ffffff;
+      }
     }
   }
 

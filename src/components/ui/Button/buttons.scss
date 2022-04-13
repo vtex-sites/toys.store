@@ -83,6 +83,12 @@
       border-radius: var(--border-radius-circle);
     }
 
+    &:hover, &:focus { text-decoration: underline; }
+
+    &:active {
+      color: var(--color-text-display);
+    }
+
     &[data-button-inverse] {
       padding: 7px 13px;
       color: var(--color-text-inverse);
