@@ -114,6 +114,10 @@
           }
         }
       }
+
+      div:not(:last-child) {
+        border: none;
+      }
     }
 
     .topLinks {

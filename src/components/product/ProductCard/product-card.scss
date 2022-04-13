@@ -1,5 +1,9 @@
 @import "src/styles/scaffold";
 
+.product-card-wrapper {
+  padding-bottom: 1rem;
+}
+
 .product-card[data-store-card] {
   position: relative;
   display: flex;

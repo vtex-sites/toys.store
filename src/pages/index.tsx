@@ -98,12 +98,12 @@ const virtualConsultantJson = [
 ]
 
 const skillsArray = [
-  'lorem ipsum dolor',
-  'sit amet',
-  'lorem ipsum',
-  'sit amet',
-  'lorem ipsum',
-  'lorem ipsum dolor',
+  'brinquedos',
+  'colecionáveis',
+  'bonencas',
+  'jogos',
+  'peças avulsas',
+  'kit praia',
 ]
 
 function Page(props: Props) {
@@ -146,19 +146,19 @@ function Page(props: Props) {
         }}
       />
       <Hero
-        title="Lorem Ipsum Dolor Sit Amet, Consectetur"
-        subtitle="Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis ex, quis dictum arcu arcu nec orci. Praesent rutrum mattis nisi."
+        title="Já pensou em um brinquedo especial hoje?"
+        subtitle="Aqui você encontra os melhores presentes para agregar conhecimento, entretenimento e humor para o seu dia a dia ou naquela ocasião especial"
         mainLink="/produtos/brinquedos"
-        mainLinkText="ver todos"
-        secondaryLinkText="encontre o presente ideal"
+        mainLinkText="Conheça"
+        secondaryLinkText="Não sabe o que precisa?"
         imageAlt="oi"
         imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
       />
       <VirtualConsultant filterValues={virtualConsultantJson}>
-        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+        <h3>Nós criamos um consultor virutal</h3>
         <p>
-          Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis
-          ex, quis dictum
+          Você conseguirá com poucos cliques, ter uma seleção incrível para
+          acertar no brinquedo ideal
         </p>
       </VirtualConsultant>
       <NewProducts>
@@ -178,10 +178,10 @@ function Page(props: Props) {
     </Carousel> */}
 
       <BannerText
-        title="Get to know our next realease"
-        caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."
+        title="Venha ver nossas novidades"
+        caption="Produtos de pré-venda feitos para quem quer e entende o que precisa."
         actionPath="/produtos/brinquedos"
-        actionLabel="call to action"
+        actionLabel="Venha ver!"
       />
       <Skills skills={skillsArray}>
         <h3>
@@ -195,7 +195,7 @@ function Page(props: Props) {
       </Skills>
       <FavoriteProducts />
       <Newsletter
-        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        title="Receba nossas novidades por e-mail, através de poucos cliques."
         onSubmit={() => {
           //
         }}

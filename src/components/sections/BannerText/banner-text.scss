@@ -4,7 +4,7 @@
   padding-top: var(--space-6);
   padding-bottom: var(--space-6);
   text-align: center;
-  background-color: var(--color-primary-2);
+  background-color: var(--color-neutral-0);
 
   [data-banner-content] {
     display: flex;
@@ -19,7 +19,7 @@
     // font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    color: var(--color-text-inverse);
+    color: var(--color-theme-2);
     text-align: center;
 
     @include media(">=notebook") { display: block; }

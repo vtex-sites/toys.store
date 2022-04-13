@@ -19,7 +19,7 @@ function Skills({
           {skills?.map((skill, index) => (
             <LinkButton
               className="frn-skills__skill"
-              to="/"
+              to={`/s/?q=${skill}`}
               variant="tertiary"
               key={String(index)}
               inverse
@@ -33,7 +33,7 @@ function Skills({
           {skills?.map((skill2, index2) => (
             <LinkButton
               className="frn-skills__skill"
-              to="/"
+              to={`/s/?q=${skill2}`}
               variant="tertiary"
               key={String(index2)}
               inverse

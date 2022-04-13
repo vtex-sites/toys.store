@@ -79,4 +79,8 @@
   [data-store-button] {
     border-radius: 60px;
   }
+
+  .link-button[data-store-button][data-button-variant="secondary"] {
+    background-color: var(--color-neutral-0);
+  }
 }

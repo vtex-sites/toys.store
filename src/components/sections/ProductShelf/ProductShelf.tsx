@@ -54,7 +54,7 @@ function ProductShelf({
             controls="navigationArrows"
           >
             {products?.edges.map((product, idx) => (
-              <div key={`${product.node.id}`}>
+              <div className="product-card-wrapper" key={`${product.node.id}`}>
                 <ProductCard product={product.node} index={idx + 1} />
               </div>
             ))}

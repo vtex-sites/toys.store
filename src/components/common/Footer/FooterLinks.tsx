@@ -5,40 +5,40 @@ import Accordion, { AccordionItem } from 'src/components/ui/Accordion'
 
 const links = [
   {
-    title: 'Our company',
+    title: 'Empresa',
     items: [
       {
         href: '/about',
-        name: 'About Us',
+        name: 'Quem somos',
       },
       {
         href: '/about',
-        name: 'Our Blog',
+        name: 'Blog',
       },
       {
         href: '/about',
-        name: 'Stores',
+        name: 'Nossas lojas',
       },
       {
         href: '/about',
-        name: 'Work With Us',
+        name: 'Trabalhe conosco',
       },
     ],
   },
   {
-    title: 'Orders & Purchases',
+    title: 'Minha conta',
     items: [
       {
         href: '/about',
-        name: 'Check Order Status',
+        name: 'Meus pedidos',
       },
       {
         href: '/about',
-        name: 'Returns and Exchanges',
+        name: 'Alterações de pedido',
       },
       {
         href: '/about',
-        name: 'Product Recall',
+        name: 'Recall',
       },
       {
         href: '/about',
@@ -51,28 +51,28 @@ const links = [
     items: [
       {
         href: '/about',
-        name: 'Support Center',
+        name: 'Suporte',
       },
       {
         href: '/about',
-        name: 'Schedule a Service',
+        name: 'Agende um serviço',
       },
       {
         href: '/about',
-        name: 'Contact Us',
+        name: 'Contato',
       },
     ],
   },
   {
-    title: 'Partnerships',
+    title: 'Parcerias',
     items: [
       {
         href: '/about',
-        name: 'Affiliate Program',
+        name: 'Afiliados',
       },
       {
         href: '/about',
-        name: 'Advertise with US',
+        name: 'FRN no mundo',
       },
       {
         href: '/about',

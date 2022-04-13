@@ -15,12 +15,12 @@ const incentives = [
   {
     icon: <Icon name="Truck" width={32} height={32} />,
     title: 'FRN Cubo',
-    firstLineText: 'Get Free Shipping',
+    firstLineText: 'Com Frete Grátis',
   },
   {
     icon: <Icon name="Calendar" width={32} height={32} />,
-    title: 'Free return',
-    firstLineText: '30 days to return',
+    title: 'Troca Garantida',
+    firstLineText: '30 dias',
   },
   {
     icon: <Icon name="Gift" width={32} height={32} />,
@@ -29,13 +29,13 @@ const incentives = [
   },
   {
     icon: <Icon name="Storefront" width={32} height={32} />,
-    title: 'Physical Stores',
-    firstLineText: '+40 Stores in Brazil',
+    title: 'Lojas físicas',
+    firstLineText: '+40 lojas no Brasil',
   },
   {
     icon: <Icon name="ShieldCheck" width={32} height={32} />,
-    title: 'Buy online',
-    firstLineText: 'Get Free Shipping',
+    title: 'Compre online',
+    firstLineText: 'Poupe a terra',
   },
 ]
 

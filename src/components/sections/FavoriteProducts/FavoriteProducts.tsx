@@ -18,7 +18,7 @@ function FavoriteProducts({ className = '' }: Props) {
               ipsum dolor sit amet, consectetur adipiscing elit avec.
             </p>
           </div>
-          <LinkButton to="" variant="secondary">
+          <LinkButton to="/produtos/brinquedos" variant="secondary">
             ver todos <Icon name="ArrowRight" width={20} height={20} />
           </LinkButton>
         </div>

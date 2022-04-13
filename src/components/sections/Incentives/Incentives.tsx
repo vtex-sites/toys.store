@@ -79,13 +79,13 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
             </CarouselShelf>
             <div className="topLinks hidden-mobile">
               <Link className="topLinks__item" to="/about">
-                About
+                Quem somos
               </Link>
-              <Link className="topLinks__item" to="/contact">
-                Contact
+              <Link className="topLinks__item" to="/about">
+                Contato
               </Link>
-              <Link className="topLinks__item" to="/policies">
-                Policies
+              <Link className="topLinks__item" to="/about">
+                Valores
               </Link>
             </div>
           </>

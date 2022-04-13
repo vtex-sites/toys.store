@@ -21,7 +21,7 @@ function Footer() {
         <FooterLinks />
 
         <section className="footer__social">
-          <p className="title-sub-subsection">Follow us</p>
+          <p className="title-sub-subsection">Siga-nos</p>
           <UIList variant="unordered">
             <li>
               <Link
@@ -102,7 +102,7 @@ function Footer() {
         {/* <Icon width="34px" height="24px" name="logoToyStore" /> */}
 
         <UIPaymentMethods>
-          <p className="title-sub-subsection">Payment Methods</p>
+          <p className="title-sub-subsection">Bandeiras</p>
           <UIList>
             <li>
               <Icon width="34px" height="24px" name="Visa" />
@@ -156,11 +156,10 @@ function Footer() {
             />
           </p>
           <p>
-            In-store price may vary. Prices and offers are subject to change.
-            2021 Store name. All rights reserved. Store is a trademark of Store
-            and its affiliated companies.
+            2021 FRN³ - Todos os direitos reservados :D <br />
+            CNPJ 123456789789456123 - Telefone: 123456789789456132
           </p>
-          <address>Mount St, 000, New York / NY - 00000.</address>
+          <address>Rua dos Nerds 404</address>
         </div>
       </div>
     </footer>
