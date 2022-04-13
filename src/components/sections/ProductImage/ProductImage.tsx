@@ -1,22 +1,57 @@
 import React from 'react'
 import { Image } from 'src/components/ui/Image'
+import { Carousel } from '@faststore/ui'
 
+interface JsonImage {
+  url: string
+  alternateName: string
+}
 interface Props {
-  image: string
-  alt: string
+  images: JsonImage[]
+  carousel?: boolean
 }
 
-function ProductImage({ image, alt }: Props) {
+function ProductImage({ images, carousel }: Props) {
   return (
-    <Image
-      preload
-      loading="eager"
-      src={image}
-      alt={alt}
-      width={802}
-      height={802}
-      sizes="(max-width: 768px) 25vw, 50vw"
-    />
+    <>
+      {carousel ? (
+        <Carousel
+          infiniteMode
+          controls="paginationBullets"
+          transition={{ duration: 400, property: 'transform' }}
+        >
+          {images.map((singleImage, index) => {
+            return (
+              <Image
+                preload
+                loading="eager"
+                src={singleImage.url}
+                alt={singleImage.alternateName}
+                width={802}
+                height={802}
+                sizes="(max-width: 768px) 25vw, 50vw"
+                key={index}
+              />
+            )
+          })}
+        </Carousel>
+      ) : (
+        images.map((singleImage, index) => {
+          return (
+            <Image
+              preload
+              loading="eager"
+              src={singleImage.url}
+              alt={singleImage.alternateName}
+              width={802}
+              height={802}
+              sizes="(max-width: 768px) 25vw, 50vw"
+              key={index}
+            />
+          )
+        })
+      )}
+    </>
   )
 }
 
