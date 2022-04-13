@@ -4,12 +4,25 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background-color: var(--bg-body);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include media("<notebook") {
+    background-size: auto;
+  }
+
+  &.home {
+    background-image: url("src/images/homeToysStore.webp");
+  }
+
+  &.notHome {
+    background-image: url("src/images/notHomeToysStore.webp");
+  }
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--bg-body);
 }
 
 .page__section {

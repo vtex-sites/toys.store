@@ -23,10 +23,6 @@
     }
 
     .hero-content-wrapper {
-      display: flex;
-      gap: var(--space-3);
-      justify-content: space-between;
-
       @include media(">=tablet", "<notebook") {
         justify-content: space-between;
         width: 50%;
@@ -35,43 +31,51 @@
 
       @include media(">=tablet") { gap: var(--space-1); }
 
-      @include media(">=notebook") { justify-content: flex-start; }
+      @include media(">=notebook") {
+        display: flex;
+        gap: var(--space-3);
+        justify-content: space-between;
+      }
     }
 
     .hero-content-info {
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      text-transform: capitalize;
+
+      @include media("<notebook") { margin-bottom: 50px; }
+
       @include media(">=notebook") { width: 43%; }
 
       h1 {
-        font-size: 48px;
-
-        // font-family: 'Montserrat';
-        font-style: normal;
+        font-size: 30px;
         font-weight: 500;
-        line-height: 59px;
-        text-transform: capitalize;
+        line-height: 36px;
+
+        @include media(">=notebook") {
+          font-size: 48px;
+          line-height: 59px;
+        }
       }
 
-      .text-body-big {
+      p {
+        margin-top: var(--space-2);
         font-size: 16px;
-
-        // font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
         line-height: 20px;
-        text-transform: capitalize;
       }
-    }
-
-    p {
-      margin-top: var(--space-2);
-
-      @include media(">=tablet") { margin-top: var(--space-4); }
     }
 
     .hero-content-info__buttons {
       display: flex;
-      justify-content: space-between;
-      width: 80%;
+      flex-direction: column;
+      width: 100%;
+
+      @include media(">=notebook") {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+      }
     }
 
     [data-hero-link] {
@@ -92,6 +96,8 @@
 
       a.link-button {
         margin-top: 0;
+
+        @include media("<notebook") { width: 100%; }
       }
     }
   }
@@ -123,7 +129,8 @@
 
     .hero-content-info__buttons {
       display: flex;
-      width: 90%;
+
+      @include media(">=notebook") { width: 90%; }
     }
 
     [data-hero-link] a {
@@ -135,6 +142,9 @@
 
     .hero-content-mosaic {
       display: flex;
+      flex-direction: column;
+
+      @include media(">=notebook") { flex-direction: row; }
 
       .hero-card {
         min-width: 14rem;
@@ -171,23 +181,37 @@
 
         &[data-card-size="large"] {
           [data-card-content] {
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 15px;
+            line-height: 18px;
+
+            @include media(">=notebook") {
+              font-size: 24px;
+              line-height: 29px;
+            }
           }
 
           .hero-card__content {
-            padding: 35px;
+            padding: 22px 40px;
+
+            @include media(">=notebook") { padding: 35px; }
           }
         }
 
         &[data-card-size="medium"] {
           [data-card-content] {
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 15px;
+            line-height: 18px;
+
+            @include media(">=notebook") {
+              font-size: 24px;
+              line-height: 29px;
+            }
           }
 
           .hero-card__content {
-            padding: 35px;
+            padding: 20px 40px;
+
+            @include media(">=notebook") { padding: 35px; }
           }
         }
 
@@ -198,7 +222,7 @@
           }
 
           .hero-card__content {
-            padding: 16px 35px;
+            padding: 10px 40px;
           }
         }
 
@@ -247,19 +271,22 @@
       }
 
       &__main-card {
-        margin-right: 32px;
+        @include media(">=notebook") { margin-right: 32px; }
       }
 
       &__card {
         display: flex;
         flex-direction: column;
-        width: 320px;
         background: rgb(255 255 255 / 70%);
 
         /* Note: backdrop-filter has minimal browser support */
         border-radius: 30px;
         box-shadow: 8px 16px 17px rgb(0 0 0 / 30%);
         backdrop-filter: blur(14px);
+
+        @include media("<notebook") { margin-bottom: 15px; }
+
+        @include media(">=notebook") { width: 320px; }
       }
 
       &__secondary-cards {

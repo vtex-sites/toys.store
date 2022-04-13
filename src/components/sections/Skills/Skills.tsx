@@ -15,7 +15,7 @@ function Skills({
   return (
     <section className={`section frn-skills ${className}`}>
       <div className="frn-skills__grid-content / grid-content">
-        <div className="frn-skills__grid-skills">
+        <div className="frn-skills__grid-skills frn-skills__grid-skills__mobile-none">
           {skills?.map((skill, index) => (
             <LinkButton
               className="frn-skills__skill"
