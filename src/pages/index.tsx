@@ -14,6 +14,8 @@ import BannerText from 'src/components/sections/BannerText'
 import FavoriteProducts from 'src/components/sections/FavoriteProducts'
 import ProductShelf from 'src/components/sections/ProductShelf'
 import { ITEMS_PER_SECTION } from 'src/constants'
+import NewProducts from 'src/components/sections/NewProducts'
+// import { Carousel } from '@faststore/ui'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -177,11 +179,22 @@ function Page(props: Props) {
           ex, quis dictum
         </p>
       </VirtualConsultant>
-      <ProductShelf
-        first={ITEMS_PER_SECTION}
-        sort="score_desc"
-        title="Novidades"
-      />
+      <NewProducts>
+        <ProductShelf
+          first={ITEMS_PER_SECTION}
+          sort="score_desc"
+          title="Novidades"
+        />
+      </NewProducts>
+      {/* <Carousel
+        controls="complete"
+        transition={{
+          duration: 400,
+          property: 'transform',
+        }}
+      >
+    </Carousel> */}
+
       <BannerText
         title="Get to know our next realease"
         caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."

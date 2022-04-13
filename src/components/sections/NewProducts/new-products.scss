@@ -58,4 +58,12 @@
     background: rgb(255 255 255 / 20%);
     backdrop-filter: blur(14px);
   }
+
+  [data-store-icon-button] {
+    border: 3px solid #fff;
+
+    svg {
+      color: #ffffff;
+    }
+  }
 }
