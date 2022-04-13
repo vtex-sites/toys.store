@@ -1,7 +1,8 @@
 import React from 'react'
-import { Incentive as UIIncentive, Carousel } from '@faststore/ui'
+import { Incentive as UIIncentive } from '@faststore/ui'
 import type { ReactNode } from 'react'
 import { Link, Link as LinkGatsby } from 'gatsby'
+import CarouselShelf from 'src/components/common/CarouselShelf'
 
 interface Incentive {
   icon: ReactNode
@@ -31,8 +32,11 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
       <div className="grid-content data-store-list">
         {carouselProps ? (
           <>
-            <Carousel
+            <CarouselShelf
+              itensPerPageSlider={1}
               controls={carouselProps?.controls}
+              id="carousel-incentives"
+              aria-label={`carousel-incentives-${classes}`}
               transition={{
                 duration: carouselProps.transition.duration,
                 property: carouselProps.transition.property,
@@ -72,7 +76,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
                   </UIIncentive>
                 </div>
               ))}
-            </Carousel>
+            </CarouselShelf>
             <div className="topLinks hidden-mobile">
               <Link className="topLinks__item" to="/about">
                 About
