@@ -182,7 +182,9 @@ function Page(props: Props) {
       <FavoriteProducts />
       <Newsletter
         title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
-        onSubmit={() => {}}
+        onSubmit={() => {
+          //
+        }}
       />
     </>
   )

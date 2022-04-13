@@ -64,16 +64,14 @@ function VirtualConsultant(
     let urlMapTemporary: string | undefined = ''
 
     urlMapping.forEach((url) => {
-      if (url) {
-        const ways = url.split('/')
-
-        urlPathTemporary = ways[0] ? `${urlPathTemporary}/${ways[0]}` : ''
-        urlMapTemporary = ways[1] ? `${urlMapTemporary},${ways[1]}` : ''
-
-        return ''
+      if (!url) {
+        return
       }
 
-      return ''
+      const ways = url.split('/')
+
+      urlPathTemporary = ways[0] ? `${urlPathTemporary}/${ways[0]}` : ''
+      urlMapTemporary = ways[1] ? `${urlMapTemporary},${ways[1]}` : ''
     })
 
     if (urlPathTemporary && urlMapTemporary) {
