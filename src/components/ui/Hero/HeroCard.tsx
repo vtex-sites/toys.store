@@ -62,7 +62,7 @@ function HeroCard({
             width={360}
             height={360 / aspectRatio}
             sizes="(max-width: 768px) 25vw, 30vw"
-            loading="lazy"
+            loading="eager"
           />
         </UICardImage>
       )}
