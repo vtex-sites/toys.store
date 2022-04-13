@@ -9,7 +9,7 @@ interface Props {
 function FavoriteProducts({ className = '' }: Props) {
   return (
     <section className={`section frn-favoriteProducts ${className}`}>
-      <div className="frn-favoriteProducts__grid-content / grid-content">
+      <div className="frn-favoriteProducts__grid-content">
         <div className="frn-favoriteProducts__children">
           <div className="frn-favoriteProducts__children-infos">
             <h3>Os favoritos do momento</h3>
