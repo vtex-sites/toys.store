@@ -8,13 +8,15 @@ import ProductCard from '../../product/ProductCard'
 import Section from '../Section'
 
 interface ProductShelfProps extends Partial<ProductsQueryQueryVariables> {
-  title: string | JSX.Element
+  title?: string | JSX.Element
   withDivisor?: boolean
+  className?: string
 }
 
 function ProductShelf({
-  title,
+  title = '',
   withDivisor = false,
+  className = '',
   ...variables
 }: ProductShelfProps) {
   const products = useProductsQuery(variables)
@@ -42,7 +44,7 @@ function ProductShelf({
 
   return (
     <Section
-      className={`page__section-shelf / grid-section ${
+      className={`page__section-shelf ${className} / grid-section ${
         withDivisor ? 'page__section-divisor' : ''
       }`}
     >

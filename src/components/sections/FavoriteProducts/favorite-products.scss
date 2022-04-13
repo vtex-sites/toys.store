@@ -1,4 +1,5 @@
 .frn-favoriteProducts {
+  overflow-x: hidden;
   background: linear-gradient(267.21deg, rgb(51 48 86 / 0%) 0%, rgb(222 104 209 / 44%) 100%);
   backdrop-filter: blur(14px);
 
@@ -32,11 +33,11 @@
     text-align: left;
 
     @include media(">=notebook") {
-      max-width: 250px;
       margin-right: 57px;
     }
 
     &-infos {
+      min-width: 250px;
       margin-bottom: 45px;
     }
 
@@ -69,11 +70,19 @@
   }
 
   &__productShelf {
-    width: 100%;
-    height: 339px;
-    margin: 33px 0;
-    background: rgb(255 255 255 / 20%);
-    backdrop-filter: blur(14px);
+    flex-grow: 1;
+
+    .page__section-shelf {
+      padding-bottom: 20px;
+      overflow-x: hidden;
+
+      .page__section-content {
+        [data-store-carousel] {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
   }
 
   [data-store-button] {

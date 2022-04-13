@@ -193,7 +193,13 @@ function Page(props: Props) {
           criança a desenvolver!
         </p>
       </Skills>
-      <FavoriteProducts />
+      <FavoriteProducts>
+        <ProductShelf
+          first={ITEMS_PER_SECTION}
+          sort="score_desc"
+          className="favorites"
+        />
+      </FavoriteProducts>
       <Newsletter
         title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
         onSubmit={() => {
