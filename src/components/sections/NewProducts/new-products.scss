@@ -11,7 +11,7 @@
     padding-bottom: var(--page-padding-notebook);
 
     @include media("<notebook") {
-      padding-right: 0;
+      padding: 0;
       margin-left: calc((100vw - var(--breakpoint-mobile)) / 2);
     }
   }
@@ -63,6 +63,14 @@
 
     section {
       max-width: 1280px;
+    }
+
+    li {
+      padding-bottom: 1rem;
+    }
+
+    [data-carousel-track-container="true"] {
+      padding: 0 1.75rem;
     }
   }
 
