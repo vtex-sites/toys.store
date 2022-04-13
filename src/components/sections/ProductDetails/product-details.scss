@@ -181,8 +181,9 @@
       border: none;
 
       &:hover, &:active, &:focus {
-        color: var(--color-theme-2);
-        background: transparent;
+        color: var(--color-theme-1);
+        background-color: transparent;
+        border: 0;
       }
     }
 

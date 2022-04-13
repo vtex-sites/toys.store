@@ -128,7 +128,7 @@ function ProductDetails({ product: staleProduct }: Props) {
             <Button
               buttonClass="button-add-pdp button button-add-pdp--desktop"
               variant="secondary"
-              icon={<Icon name="buttonSeemore" width={12} height={8} />}
+              icon={<Icon name="CaretDown" width={14} height={14} />}
               iconPosition="right"
               onClick={() => handleScrollToElement(myRef)}
             >
