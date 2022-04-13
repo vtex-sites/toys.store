@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  Incentive as UIIncentive,
-  List as UIList,
-  Carousel,
-} from '@faststore/ui'
+import { Incentive as UIIncentive, Carousel } from '@faststore/ui'
 import type { ReactNode } from 'react'
 import { Link, Link as LinkGatsby } from 'gatsby'
 
@@ -32,7 +28,7 @@ interface Props {
 function Incentives({ incentives, carouselProps, classes = '' }: Props) {
   return (
     <div className={`incentives ${classes} / grid-content-full`}>
-      <UIList variant="unordered" className="grid-content">
+      <div className="grid-content data-store-list">
         {carouselProps ? (
           <>
             <Carousel
@@ -43,7 +39,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
               }}
             >
               {incentives.map((incentive, index) => (
-                <li key={String(index)}>
+                <div key={String(index)}>
                   <UIIncentive>
                     {incentive.url ? (
                       <LinkGatsby
@@ -74,7 +70,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
                       </>
                     )}
                   </UIIncentive>
-                </li>
+                </div>
               ))}
             </Carousel>
             <div className="topLinks hidden-mobile">
@@ -127,7 +123,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
             ))}
           </>
         )}
-      </UIList>
+      </div>
     </div>
   )
 }
