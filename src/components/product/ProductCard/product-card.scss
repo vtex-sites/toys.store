@@ -44,7 +44,9 @@
           top: -10px;
         }
 
-        &[data-store-discount-badge-variant="low"] {
+        &[data-store-discount-badge-variant="low"],
+        &[data-store-discount-badge-variant="medium"],
+        &[data-store-discount-badge-variant="high"] {
           color: #ffffff;
           background-color: #8082db;
         }
@@ -85,11 +87,12 @@
   }
 
   [data-card-content] a[href] {
-    min-height: 100%;
+    min-height: 60px;
     max-height: var(--space-6);
     padding: 0;
     font-size: 0.875rem;
     font-weight: 400;
+    line-height: 1.2;
     color: #ffffff;
     text-decoration: none;
     outline: none;
