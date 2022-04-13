@@ -1,8 +1,8 @@
 @import "src/styles/scaffold";
 
 .suggestions__title {
-  margin-bottom: var(--space-1);
   padding: 0 var(--space-3);
+  margin-bottom: var(--space-1);
   font-size: var(--text-size-3);
   line-height: 1.5;
 }
@@ -47,18 +47,18 @@
 
 [data-store-suggestions] {
   .suggestions__item-bold {
-    color: var(--color-neutral-7);
     font-weight: var(--text-weight-bold);
+    color: var(--color-neutral-7);
   }
 
   .button[data-store-button] {
     padding: var(--space-2) 0;
-    color: var(--color-text-subtle);
-    font-weight: var(--text-weight-regular);
     font-size: var(--text-size-2);
+    font-weight: var(--text-weight-regular);
     line-height: 1.25;
-    background-color: transparent;
+    color: var(--color-text-subtle);
     cursor: pointer;
+    background-color: transparent;
   }
 
   [data-store-link] {

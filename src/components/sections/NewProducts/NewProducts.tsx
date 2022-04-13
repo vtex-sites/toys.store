@@ -10,7 +10,6 @@ function NewProducts({ children, className = '' }: PropsWithChildren<Props>) {
     <section className={`section frn-newProducts ${className}`}>
       <div className="frn-newProducts__grid-content / grid-content">
         <div className="frn-newProducts__children">{children}</div>
-        <div className="frn-newProducts__productShelf" />
       </div>
     </section>
   )

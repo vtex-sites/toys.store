@@ -24,7 +24,9 @@
     align-items: center;
     justify-content: center;
     order: 0;
-    max-width: 420px;
+
+    // max-width: 420px;
+
     padding: 0;
     text-align: center;
 
@@ -58,6 +60,10 @@
       line-height: 20px;
       color: #ffffff;
     }
+
+    section {
+      max-width: 1280px;
+    }
   }
 
   &__productShelf {
@@ -66,5 +72,13 @@
     margin: 33px 0;
     background: rgb(255 255 255 / 20%);
     backdrop-filter: blur(14px);
+  }
+
+  [data-store-icon-button] {
+    border: 3px solid #fff;
+
+    svg {
+      color: #ffffff;
+    }
   }
 }

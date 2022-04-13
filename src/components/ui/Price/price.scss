@@ -1,7 +1,7 @@
 .price[data-store-price] {
   &[data-variant="listing"] {
-    text-decoration-line: line-through;
     color: var(--color-text-subtle);
+    text-decoration-line: line-through;
   }
 
   &[data-variant="spot"] {
