@@ -34,6 +34,12 @@
 
   [data-accordion-item] {
     padding-bottom: 10px;
+
+    @include media("<notebook") {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
 
   [data-accordion-item] [data-store-button] {
