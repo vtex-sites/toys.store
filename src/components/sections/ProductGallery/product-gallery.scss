@@ -104,6 +104,10 @@
 
   .button[data-store-button] {
     background-color: transparent;
+
+    @include media("<notebook") {
+      color: #fff;
+    }
   }
 
   @include media(">=notebook") {
@@ -157,7 +161,6 @@
 
   order: 3;
   padding: var(--padding) var(--padding) 0;
-  background-color: var(--bg-neutral-light);
 
   @include media(">=notebook") {
     grid-column: 4 / span 9;
@@ -168,6 +171,12 @@
 
   .product-card[data-store-card] {
     min-width: 15.25rem;
+
+    @include media("<notebook") {
+      min-width: inherit;
+      max-width: 100%;
+      overflow: hidden;
+    }
   }
 }
 
@@ -202,6 +211,10 @@
 
   a.link-button {
     border-radius: 60px;
+
+    @include media("<notebook") {
+      width: auto;
+    }
   }
 
   // background-color: var(--bg-neutral-lightest);
