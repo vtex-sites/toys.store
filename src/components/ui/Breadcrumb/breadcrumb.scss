@@ -16,6 +16,10 @@
         align-items: center;
       }
 
+      &:nth-child(2) {
+        display: none;
+      }
+
       &:not(:first-child) {
         display: inline;
         min-width: var(--space-7);
