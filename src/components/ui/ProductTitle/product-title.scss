@@ -1,7 +1,9 @@
 @import "src/styles/scaffold";
 
 .product-title {
-  @include media(">=tablet") { padding: var(--space-4) var(--space-5); }
+  @include media(">=notebook") { padding: var(--space-4) var(--space-5); }
+
+  @include media("<=tablet") { padding: var(--space-3); }
 }
 
 .product-title__header {
@@ -37,6 +39,11 @@
   color: var(--color-theme-3);
 }
 
-.product-title__brandname, .product-title__shortdescription { color: var(--color-theme-3); }
+.product-title__brandname { color: var(--color-theme-3); }
 
-.product-title__shortdescription { margin-top: var(--space-2); }
+.product-title__shortdescription {
+  margin-top: var(--space-2);
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--color-theme-3);
+}

@@ -15,6 +15,7 @@ import type {
   ProductPageQueryQueryVariables,
 } from '@generated/graphql'
 import { ITEMS_PER_SECTION } from 'src/constants'
+import ScrollToTopButton from 'src/components/sections/ScrollToTopButton'
 
 export type Props = PageProps<
   ProductPageQueryQuery,
@@ -106,6 +107,8 @@ function Page(props: Props) {
         title="Quem comprou, comprou também"
         withDivisor
       />
+
+      <ScrollToTopButton />
     </>
   )
 }

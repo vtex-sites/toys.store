@@ -24,8 +24,8 @@ module.exports = {
     server: process.env.BASE_SITE_URL || 'http://localhost:9000',
     pages: {
       home: '/',
-      pdp: '/apple-magic-mouse-99988212/p',
-      collection: '/office',
+      pdp: '/carrinho-de-bebe-para-boneca-bebezinho-real-roma-5687-1002125352-1/p',
+      collection: '/produtos',
     },
   },
 
@@ -33,11 +33,11 @@ module.exports = {
   cypress: {
     pages: {
       home: '/',
-      pdp: '/apple-magic-mouse-99988212/p',
-      collection: '/office',
+      pdp: '/carrinho-de-bebe-para-boneca-bebezinho-real-roma-5687-1002125352-1/p',
+      collection: '/produtos',
       collection_filtered:
-        '/office/?category-1=office&marca=acer&facets=category-1%2Cmarca',
-      search: '/s?q=orange',
+        '/produtos/?category-1=produtos&categoria=brinquedos&idade=3-6-anos&facets=category-1%2Ccategoria%2Cidade&sort=score_desc&page=0',
+      search: '/s?q=carrinho',
     },
   },
 

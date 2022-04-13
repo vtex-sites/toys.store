@@ -52,7 +52,7 @@ function ProductTitle({
 
       {description && (
         <div className="product-title__shortdescription / text-body-small">
-          {description.substr(0, 300)}...
+          {description.substr(0, 120)}...
         </div>
       )}
     </div>
