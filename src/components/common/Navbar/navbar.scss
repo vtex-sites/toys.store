@@ -227,6 +227,11 @@
       padding-top: var(--space-1);
 
       li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: stretch;
+        align-items: center;
+        justify-content: space-between;
         margin-right: var(--space-5);
 
         &:last-child {
@@ -248,7 +253,9 @@
   a {
     display: block;
     width: 100%;
-    font-size: var(--text-size-1);
+
+    // font-size: var(--text-size-1);
+    font-size: 13px;
     font-weight: var(--text-weight-black);
     line-height: var(--space-3);
     color: var(--color-neutral-0);
