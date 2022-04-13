@@ -155,7 +155,7 @@ function Page(props: Props) {
         imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
       />
       <VirtualConsultant filterValues={virtualConsultantJson}>
-        <h3>Nós criamos um consultor virutal</h3>
+        <h3>Nós criamos um consultor virtual</h3>
         <p>
           Você conseguirá com poucos cliques, ter uma seleção incrível para
           acertar no brinquedo ideal
