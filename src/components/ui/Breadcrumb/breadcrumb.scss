@@ -16,10 +16,6 @@
         align-items: center;
       }
 
-      &:nth-child(2) {
-        display: none;
-      }
-
       &:not(:first-child) {
         display: inline;
         min-width: var(--space-7);
@@ -28,6 +24,10 @@
         white-space: nowrap;
 
         @include media("<=tablet") { max-width: 30%; }
+      }
+
+      &:nth-child(2) {
+        display: none;
       }
     }
 
