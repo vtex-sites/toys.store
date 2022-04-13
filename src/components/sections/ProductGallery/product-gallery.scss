@@ -208,6 +208,17 @@
     margin-top: var(--padding);
   }
 
+  &--top,
+  &--bottom {
+    a.link-button[data-store-button][data-button-variant="secondary"] {
+      &:active,
+      &:hover {
+        background-color: transparent;
+        border-color: #ffffff;
+      }
+    }
+  }
+
   [data-store-button] {
     width: 100%;
 
