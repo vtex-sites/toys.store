@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react'
 import Footer from 'src/components/common/Footer'
 import Navbar from 'src/components/common/Navbar'
-// import Toast from 'src/components/common/Toast'
 import { useUI } from 'src/sdk/ui'
 import type { PropsWithChildren } from 'react'
 import { useLocation } from '@reach/router'
@@ -30,8 +29,6 @@ function Layout({ children }: PropsWithChildren<unknown>) {
       <main>{children}</main>
 
       <Footer />
-
-      {/* <Toast /> */}
 
       {displayMinicart && (
         <Suspense fallback={null}>
