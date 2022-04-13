@@ -80,7 +80,6 @@
       @include media(">=notebook") {
         display: block;
         margin-right: 18px;
-        font-family: var(--font-lato);
         font-size: 16px;
       }
     }
@@ -135,7 +134,6 @@
   order: 1;
   min-height: rem(45px);
   margin: 0 var(--space-2);
-  font-family: var(--font-lato);
   color: #ffffff;
   border-bottom: solid 1px gray;
 

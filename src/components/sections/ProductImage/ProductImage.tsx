@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image } from 'src/components/ui/Image'
-import { Carousel } from '@faststore/ui'
+import CarouselShelf from 'src/components/common/CarouselShelf'
 
 interface JsonImage {
   url: string
@@ -15,9 +15,11 @@ function ProductImage({ images, carousel }: Props) {
   return (
     <>
       {carousel ? (
-        <Carousel
-          infiniteMode
+        <CarouselShelf
+          itensPerPageSlider={1}
           controls="paginationBullets"
+          id="carousel-images"
+          aria-label="carousel-images-pdp"
           transition={{ duration: 400, property: 'transform' }}
         >
           {images.map((singleImage, index) => {
@@ -34,7 +36,7 @@ function ProductImage({ images, carousel }: Props) {
               />
             )
           })}
-        </Carousel>
+        </CarouselShelf>
       ) : (
         images.map((singleImage2, index2) => {
           return (

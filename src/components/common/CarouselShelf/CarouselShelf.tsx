@@ -193,12 +193,13 @@ function CarouselShelf({
               role="tabpanel"
               aria-roledescription="slide"
               key={idx}
-              id={`carousel-item-${idx}`}
+              id={`carousel-item--${idx}-${id}`}
               data-carousel-item
               style={{ width: '100%' }}
               data-visible={
                 isItemVisible(idx - Number(infiniteMode)) || undefined
               }
+              aria-label={`carousel-item-${idx}-${id}`}
             >
               {shouldRenderItem(idx - Number(infiniteMode))
                 ? currentSlide
@@ -240,7 +241,9 @@ function CarouselShelf({
 
               slide(idx, sliderDispatch)
             }}
-            ariaControlsGenerator={(idx) => `carousel-item-${idx}`}
+            ariaControlsGenerator={(idx) =>
+              `carousel-item-${idx}-bullets-${id}`
+            }
             onKeyDown={handleBulletsKeyDown}
             onFocus={(event) => {
               event.currentTarget.focus()
