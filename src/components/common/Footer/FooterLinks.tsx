@@ -8,19 +8,19 @@ const links = [
     title: 'Our company',
     items: [
       {
-        href: '/',
+        href: '/about',
         name: 'About Us',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Our Blog',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Stores',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Work With Us',
       },
     ],
@@ -29,19 +29,19 @@ const links = [
     title: 'Orders & Purchases',
     items: [
       {
-        href: '/',
+        href: '/about',
         name: 'Check Order Status',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Returns and Exchanges',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Product Recall',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Gift Cards',
       },
     ],
@@ -50,15 +50,15 @@ const links = [
     title: 'Support & Services',
     items: [
       {
-        href: '/',
+        href: '/about',
         name: 'Support Center',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Schedule a Service',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Contact Us',
       },
     ],
@@ -67,15 +67,15 @@ const links = [
     title: 'Partnerships',
     items: [
       {
-        href: '/',
+        href: '/about',
         name: 'Affiliate Program',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Advertise with US',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Market Place',
       },
     ],
