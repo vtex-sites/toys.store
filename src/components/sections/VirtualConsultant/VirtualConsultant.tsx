@@ -63,7 +63,7 @@ function VirtualConsultant(
     let urlPathTemporary: string | undefined = ''
     let urlMapTemporary: string | undefined = ''
 
-    urlMapping.map((url) => {
+    urlMapping.forEach((url) => {
       if (url) {
         const ways = url.split('/')
 
