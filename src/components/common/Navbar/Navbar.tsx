@@ -26,7 +26,7 @@ function NavLinks({ onClickLink }: NavLinksProps) {
     allStoreCollection: { edges: links },
   } = useStaticQuery<StoreCollectionQuery>(graphql`
     query StoreCollection {
-      allStoreCollection(filter: { type: { eq: Department } }) {
+      allStoreCollection(filter: { type: { eq: Category } }) {
         edges {
           node {
             slug
