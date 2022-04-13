@@ -92,7 +92,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
         ) : (
           <>
             {incentives.map((incentive, index) => (
-              <li key={String(index)}>
+              <div key={String(index)}>
                 <UIIncentive>
                   {incentive.url ? (
                     <LinkGatsby
@@ -123,7 +123,7 @@ function Incentives({ incentives, carouselProps, classes = '' }: Props) {
                     </>
                   )}
                 </UIIncentive>
-              </li>
+              </div>
             ))}
           </>
         )}

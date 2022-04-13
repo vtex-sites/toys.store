@@ -9,9 +9,11 @@ interface JsonImage {
 interface Props {
   images: JsonImage[]
   carousel?: boolean
+  width: number
+  height: number
 }
 
-function ProductImage({ images, carousel }: Props) {
+function ProductImage({ images, carousel, width, height }: Props) {
   return (
     <>
       {carousel ? (
@@ -29,8 +31,8 @@ function ProductImage({ images, carousel }: Props) {
                 loading="eager"
                 src={singleImage.url}
                 alt={singleImage.alternateName}
-                width={802}
-                height={802}
+                width={width}
+                height={height}
                 sizes="(max-width: 768px) 25vw, 50vw"
                 key={index}
               />
@@ -45,8 +47,8 @@ function ProductImage({ images, carousel }: Props) {
               loading="eager"
               src={singleImage2.url}
               alt={singleImage2.alternateName}
-              width={802}
-              height={802}
+              width={width}
+              height={height}
               sizes="(max-width: 768px) 25vw, 50vw"
               key={index2}
             />

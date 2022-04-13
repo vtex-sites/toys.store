@@ -54,9 +54,9 @@ function ProductShelf({
             controls="navigationArrows"
           >
             {products?.edges.map((product, idx) => (
-              <li key={`${product.node.id}`}>
+              <div key={`${product.node.id}`}>
                 <ProductCard product={product.node} index={idx + 1} />
-              </li>
+              </div>
             ))}
           </CarouselShelf>
           {/* <ul data-product-shelf className="grid-content"></ul> */}

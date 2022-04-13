@@ -137,7 +137,12 @@ function ProductDetails({ product: staleProduct }: Props) {
           </header>
 
           <section className="product-details__image product-details__image--mobile">
-            <ProductImage images={productImages} carousel />
+            <ProductImage
+              images={productImages}
+              width={802}
+              height={802}
+              carousel
+            />
           </section>
 
           <section className="product-details__settings">
@@ -188,7 +193,7 @@ function ProductDetails({ product: staleProduct }: Props) {
         </section>
 
         <section className="product-details__image product-details__image--desktop">
-          <ProductImage images={productImages} />
+          <ProductImage images={productImages} width={600} height={600} />
         </section>
 
         <section className="product-details__content" ref={myRef}>
