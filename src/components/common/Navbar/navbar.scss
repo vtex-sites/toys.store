@@ -259,7 +259,8 @@
     font-weight: var(--text-weight-black);
     line-height: var(--space-3);
     color: var(--color-neutral-0);
-    text-transform: lowercase;
+
+    // text-transform: lowercase;
 
     &:visited {
       color: var(--color-neutral-0);
