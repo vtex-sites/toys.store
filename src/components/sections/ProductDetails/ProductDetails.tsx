@@ -143,15 +143,17 @@ function ProductDetails({ product: staleProduct }: Props) {
           <section className="product-details__settings">
             <section className="product-details__values">
               <div className="product-details__prices">
-                <Price
-                  value={listPrice}
-                  formatter={useFormattedPrice}
-                  testId="list-price"
-                  data-value={listPrice}
-                  variant="listing"
-                  classes="text-body-small"
-                  SRText="De:"
-                />
+                {listPrice > lowPrice && (
+                  <Price
+                    value={listPrice}
+                    formatter={useFormattedPrice}
+                    testId="list-price"
+                    data-value={listPrice}
+                    variant="listing"
+                    classes="text-body-small"
+                    SRText="De:"
+                  />
+                )}
                 <Price
                   value={lowPrice}
                   formatter={useFormattedPrice}

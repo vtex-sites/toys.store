@@ -216,7 +216,8 @@
 
     &[data-variant="spot"] {
       margin: 0;
-      margin-left: var(--space-2);
+
+      // margin-left: var(--space-2);
       font-weight: var(--text-weight-black);
     }
   }
