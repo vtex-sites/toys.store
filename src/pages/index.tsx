@@ -14,7 +14,6 @@ import FavoriteProducts from 'src/components/sections/FavoriteProducts'
 import ProductShelf from 'src/components/sections/ProductShelf'
 import { ITEMS_PER_SECTION } from 'src/constants'
 import NewProducts from 'src/components/sections/NewProducts'
-// import { Carousel } from '@faststore/ui'
 
 export type Props = PageProps<HomePageQueryQuery>
 
