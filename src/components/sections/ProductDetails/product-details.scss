@@ -123,6 +123,10 @@
       line-height: 27px;
       color: var(--color-neutral-0);
     }
+
+    @include media("<notebook") {
+      background: rgb(34 31 65 / 40%);
+    }
   }
 
   @include media(">=tablet") {
