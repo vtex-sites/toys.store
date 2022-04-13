@@ -46,6 +46,10 @@
     }
   }
 
+  [data-store-button] {
+    border-radius: 60px;
+  }
+
   @include media(">=notebook") {
     padding-top: var(--space-9);
     padding-bottom: var(--space-9);

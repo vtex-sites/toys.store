@@ -54,7 +54,7 @@
   height: 50px;
   margin: 36px 0 0;
   border: 1px solid rgb(255 255 255 / 50%);
-  border-radius: var(--border-radius-default);
+  border-radius: var(--border-radius-pill);
 
   @include media("<notebook") {
     margin: 34px 0 0;

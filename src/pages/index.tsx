@@ -148,9 +148,8 @@ function Page(props: Props) {
       <Hero
         title="Lorem Ipsum Dolor Sit Amet, Consectetur"
         subtitle="Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis ex, quis dictum arcu arcu nec orci. Praesent rutrum mattis nisi."
-        mainLink="/"
+        mainLink="/produtos/brinquedos"
         mainLinkText="ver todos"
-        secondaryLink="/"
         secondaryLinkText="encontre o presente ideal"
         imageAlt="oi"
         imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
@@ -181,7 +180,7 @@ function Page(props: Props) {
       <BannerText
         title="Get to know our next realease"
         caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elit nisi, vehicula in turpis sit amet, posuere aliquam nisi."
-        actionPath="/"
+        actionPath="/produtos/brinquedos"
         actionLabel="call to action"
       />
       <Skills skills={skillsArray}>

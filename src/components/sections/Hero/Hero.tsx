@@ -1,6 +1,6 @@
 import React from 'react'
 import UIHero, { HeroCard, HeroContent, HeroLink } from 'src/components/ui/Hero'
-import { LinkButton } from 'src/components/ui/Button'
+import Button, { LinkButton } from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
 
 import Section from '../Section'
@@ -13,7 +13,6 @@ interface HeroProps {
   variant?: Variant
   mainLinkText?: string
   mainLink?: string
-  secondaryLink?: string
   secondaryLinkText?: string
   icon?: JSX.Element
   imageSrc: string
@@ -26,7 +25,6 @@ const Hero = ({
   variant = 'default',
   mainLinkText,
   mainLink,
-  secondaryLink,
   secondaryLinkText,
   icon,
   imageAlt,
@@ -57,13 +55,18 @@ const Hero = ({
                     </LinkButton>
                   </HeroLink>
                 )}
-                {!!secondaryLink && (
-                  <HeroLink>
-                    <LinkButton to={secondaryLink} variant="primary">
-                      {secondaryLinkText}
-                    </LinkButton>
-                  </HeroLink>
-                )}
+                <Button
+                  variant="primary"
+                  onClick={() => {
+                    const sectionRef = document.querySelector('.frn-consultant')
+
+                    if (sectionRef) {
+                      sectionRef.scrollIntoView()
+                    }
+                  }}
+                >
+                  {secondaryLinkText}
+                </Button>
               </div>
             </div>
             <div className="hero-content-mosaic">
@@ -73,7 +76,7 @@ const Hero = ({
                   imageAlt={imageAlt}
                   size="large"
                   title="Brinquedos de até R$100"
-                  link="/"
+                  link="/produtos/brinquedos"
                   linkText="ver todos"
                   icon
                 />
@@ -83,7 +86,7 @@ const Hero = ({
                   <HeroCard
                     size="medium"
                     title="Para jogar com a galera"
-                    link="/"
+                    link="/produtos/brinquedos"
                     linkText="ver todos"
                     icon
                   />
@@ -92,7 +95,7 @@ const Hero = ({
                   <HeroCard
                     size="small"
                     title="Jogos individuais"
-                    link="/"
+                    link="/produtos/brinquedos"
                     linkText="ver todos"
                     icon
                   />
@@ -101,7 +104,7 @@ const Hero = ({
                   <HeroCard
                     size="small"
                     title="Promoções incríveis"
-                    link="/"
+                    link="/produtos/brinquedos"
                     linkText="ver todos"
                     icon
                   />
