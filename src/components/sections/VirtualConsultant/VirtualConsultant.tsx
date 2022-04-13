@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import type { PropsWithChildren, AnchorHTMLAttributes } from 'react'
 import { RadioGroup, RadioOption } from '@faststore/ui'
+import Icon from 'src/components/ui/Icon'
 
 import Link from '../../ui/Link'
 
@@ -135,7 +136,7 @@ function VirtualConsultant(
             to={handleUrl(`${option0}|${option1}|${option2}`)}
             onClick={onClickLink}
           >
-            pesquisar ►
+            pesquisar <Icon name="ArrowRight" width={20} height={20} />
           </Link>
         </div>
       </div>
