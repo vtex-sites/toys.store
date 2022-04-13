@@ -23,8 +23,7 @@ function HeaderBanner({
           <p>{subtitle}</p>
         </div>
         <div className="frn-headerBanner__image">
-          <div>{imageSrc}</div>
-          <div>{imageAlt}</div>
+          <img src={imageSrc} alt={imageAlt} loading="lazy" />
         </div>
       </div>
     </section>
