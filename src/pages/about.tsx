@@ -4,6 +4,8 @@ import HeaderBanner from 'src/components/sections/HeaderBanner'
 import AboutDescription from 'src/components/sections/AboutDescription'
 import { Banner, BannerContent, BannerLink } from '@faststore/ui'
 import { LinkButton } from 'src/components/ui/Button'
+import FavoriteProducts from 'src/components/sections/FavoriteProducts'
+import Newsletter from 'src/components/sections/Newsletter'
 
 function Page() {
   return (
@@ -13,8 +15,8 @@ function Page() {
       <HeaderBanner
         title="Lorem ipsum dolor sit amet, consectetur"
         subtitle="Suspendisse molestie, lectus et finibus lobortis, ante felis facilisis ex, quis dictum"
-        imageAlt="Alt da imagem"
-        imageSrc="Src da imagem"
+        imageAlt="Banner do Header"
+        imageSrc="/HeaderBanner.webp"
       />
       <AboutDescription>
         <h3>Lorem ipsum dolor</h3>
@@ -81,6 +83,13 @@ function Page() {
           aliquam.
         </p>
       </AboutDescription>
+      <FavoriteProducts />
+      <Newsletter
+        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        onSubmit={() => {
+          //
+        }}
+      />
     </>
   )
 }
