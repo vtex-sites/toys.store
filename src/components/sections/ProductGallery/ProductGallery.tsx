@@ -49,7 +49,7 @@ function ProductGallery({ title, searchTerm }: Props) {
       {searchTerm && (
         <header className="product-listing__search-term / grid-content">
           <h1>
-            Showing results for: <span>{searchTerm}</span>
+            Mostrando resultados para: <span>{searchTerm}</span>
           </h1>
         </header>
       )}
@@ -66,7 +66,7 @@ function ProductGallery({ title, searchTerm }: Props) {
 
         <div className="product-listing__results-count" data-count={totalCount}>
           <SkeletonElement shimmer type="text" loading={!data}>
-            <h2 data-testid="total-product-count">{totalCount} Results</h2>
+            <h2 data-testid="total-product-count">{totalCount} Resultados</h2>
           </SkeletonElement>
         </div>
 
@@ -81,10 +81,10 @@ function ProductGallery({ title, searchTerm }: Props) {
               data-testid="open-filter-button"
               icon={<Icon name="FadersHorizontal" width={16} height={16} />}
               iconPosition="left"
-              aria-label="Open Filters"
+              aria-label="Abrir filtros"
               onClick={() => setIsFilterOpen(!isFilterOpen)}
             >
-              Filters
+              Filtros
             </Button>
           </SkeletonElement>
         </div>
@@ -145,7 +145,7 @@ function ProductGallery({ title, searchTerm }: Props) {
                 rel="next"
                 variant="secondary"
               >
-                Load more products
+                carregar mais
               </LinkButton>
             </div>
           )}

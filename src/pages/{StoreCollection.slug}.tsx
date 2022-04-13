@@ -105,7 +105,7 @@ function Page(props: Props) {
 
       <HeaderBanner
         title={title}
-        subtitle={`All the amazing ${title} from the brands we partner with.`}
+        subtitle="Os melhores produtos das melhores marcas com as quais fazemos parceria."
         imageAlt="Banner do Header"
         imageSrc="/HeaderBanner.webp"
       />
@@ -115,7 +115,7 @@ function Page(props: Props) {
       <ProductShelf
         first={ITEMS_PER_SECTION}
         sort="score_desc"
-        title="You might also like"
+        title="Você também vai gostar"
         withDivisor
       />
 
