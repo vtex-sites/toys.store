@@ -191,7 +191,7 @@ function ProductDetails({ product: staleProduct }: Props) {
 
         <section className="product-details__content" ref={myRef}>
           <article className="product-details__description">
-            <h2 className="title-subsection">Description</h2>
+            <h2 className="title-subsection">Descrição</h2>
             <p className="text-body">{description}</p>
           </article>
         </section>
