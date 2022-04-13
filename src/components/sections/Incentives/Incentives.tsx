@@ -15,7 +15,7 @@ interface Incentive {
   url?: string
 }
 
-interface Carousel {
+interface FrnCarousel {
   controls: string
   transition: {
     duration: number
@@ -25,7 +25,7 @@ interface Carousel {
 
 interface Props {
   incentives: Incentive[]
-  carouselProps?: Carousel
+  carouselProps?: FrnCarousel
   classes?: string
 }
 
