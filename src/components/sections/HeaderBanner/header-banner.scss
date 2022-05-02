@@ -1,0 +1,79 @@
+.frn-headerBanner {
+  width: 100%;
+  background: linear-gradient(95.73deg, rgb(97 92 149 / 37%) -0.88%, rgb(97 92 149 / 0%) 100%);
+  backdrop-filter: blur(21px);
+
+  &__grid-content {
+    display: flex;
+    flex-flow: column-reverse;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(">=notebook") {
+      flex-direction: row;
+      padding-right: 0;
+      padding-left: var(--page-padding-notebook);
+      margin-left: calc((100vw - var(--breakpoint-notebook)) / 2);
+    }
+
+    @include media("<notebook") {
+      padding-right: 0;
+      margin-left: calc((100vw - var(--breakpoint-phonemid)) / 6);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: right;
+    justify-content: center;
+    order: 0;
+    padding: 0;
+    margin-top: var(--page-padding-notebook);
+    margin-bottom: var(--page-padding-notebook);
+
+    @include media(">=notebook") {
+      max-width: 374px;
+      margin-right: 138px;
+    }
+
+    h3 {
+      margin-bottom: 15px;
+      font-size: 32px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 39px;
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 16px;
+
+      // font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+  }
+
+  &__image {
+    flex-grow: 1;
+
+    img {
+      @include media(">=notebook") {
+        height: 100%;
+      }
+
+      @include media(">=notebook") {
+        width: 100%;
+      }
+    }
+  }
+}

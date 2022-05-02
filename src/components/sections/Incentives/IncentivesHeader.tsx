@@ -2,18 +2,25 @@ import React from 'react'
 import Icon from 'src/components/ui/Icon'
 
 import Incentives from './Incentives'
-import Section from '../Section'
+
+interface FrnCarousel {
+  controls?: 'complete' | 'navigationArrows' | 'paginationBullets'
+  transition: {
+    duration: number
+    property: string
+  }
+}
 
 const incentives = [
   {
     icon: <Icon name="Truck" width={32} height={32} />,
-    title: 'Buy online',
-    firstLineText: 'Get Free Shipping',
+    title: 'FRN Cubo',
+    firstLineText: 'Com Frete Grátis',
   },
   {
     icon: <Icon name="Calendar" width={32} height={32} />,
-    title: 'Free return',
-    firstLineText: '30 days to return',
+    title: 'Troca Garantida',
+    firstLineText: '30 dias',
   },
   {
     icon: <Icon name="Gift" width={32} height={32} />,
@@ -22,21 +29,31 @@ const incentives = [
   },
   {
     icon: <Icon name="Storefront" width={32} height={32} />,
-    title: 'Physical Stores',
-    firstLineText: '+40 Stores in Brazil',
+    title: 'Lojas físicas',
+    firstLineText: '+40 lojas no Brasil',
   },
   {
     icon: <Icon name="ShieldCheck" width={32} height={32} />,
-    title: 'Buy online',
-    firstLineText: 'Get Free Shipping',
+    title: 'Compre online',
+    firstLineText: 'Poupe a terra',
   },
 ]
 
+const carousel: FrnCarousel = {
+  controls: 'navigationArrows',
+  transition: {
+    duration: 400,
+    property: 'transform',
+  },
+}
+
 function IncentivesHeader() {
   return (
-    <Section>
-      <Incentives incentives={incentives} classes="incentives--colored" />
-    </Section>
+    <Incentives
+      incentives={incentives}
+      carouselProps={carousel}
+      classes="incentives--colored incentives--header"
+    />
   )
 }
 

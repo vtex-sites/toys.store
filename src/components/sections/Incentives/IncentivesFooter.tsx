@@ -7,28 +7,28 @@ function IncentivesFooter() {
   const incentives = [
     {
       icon: <Icon name="ShieldCheck" width={32} height={32} />,
-      firstLineText: 'Trusted',
-      secondLineText: 'by SafeCon',
+      firstLineText: 'Protegido',
+      secondLineText: 'Pela força de zeus',
     },
     {
       icon: <Icon name="Medal" width={32} height={32} />,
-      firstLineText: 'Quality',
-      secondLineText: 'Products',
+      firstLineText: 'Qualidade',
+      secondLineText: 'Dos Deuses',
     },
     {
       icon: <Icon name="CircleWavyCheck" width={32} height={32} />,
-      firstLineText: '3-years',
-      secondLineText: 'Guarantee',
+      firstLineText: '3 anos',
+      secondLineText: 'de garantia',
     },
     {
       icon: <Icon name="Storefront" width={32} height={32} />,
-      firstLineText: 'Pickup',
-      secondLineText: 'Options',
+      firstLineText: 'Frete',
+      secondLineText: 'Mais rápido',
     },
     {
       icon: <Icon name="Truck" width={32} height={32} />,
-      firstLineText: 'Free',
-      secondLineText: 'Shipping',
+      firstLineText: 'Frete',
+      secondLineText: 'Gratix',
     },
   ]
 

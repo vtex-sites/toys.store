@@ -21,7 +21,7 @@ function Footer() {
         <FooterLinks />
 
         <section className="footer__social">
-          <p className="title-sub-subsection">Follow us</p>
+          <p className="title-sub-subsection">Siga-nos</p>
           <UIList variant="unordered">
             <li>
               <Link
@@ -89,17 +89,20 @@ function Footer() {
         <UIIcon
           component={
             <img
-              src="/BaseStore.svg"
-              alt="BaseStore logo"
-              width="124px"
-              height="32px"
+              // className="footer__logo"
+              src="/Logo.png"
+              alt="VTEX logo"
+              width="150"
+              // margin="-31px 0 0px -42px;"
+              height="124.7"
               loading="lazy"
             />
           }
         />
+        {/* <Icon width="34px" height="24px" name="logoToyStore" /> */}
 
         <UIPaymentMethods>
-          <p className="title-sub-subsection">Payment Methods</p>
+          <p className="title-sub-subsection">Bandeiras</p>
           <UIList>
             <li>
               <Icon width="34px" height="24px" name="Visa" />
@@ -137,13 +140,26 @@ function Footer() {
         </UIPaymentMethods>
 
         <div className="footer__copyright / text-body-small">
-          <p>This website uses VTEX technology</p>
           <p>
-            In-store price may vary. Prices and offers are subject to change.
-            2021 Store name. All rights reserved. Store is a trademark of Store
-            and its affiliated companies.
+            Powered by
+            <UIIcon
+              component={
+                <img
+                  src="/vtexLogo.svg"
+                  alt="VTEX logo"
+                  width="41px;"
+                  // margin="0px 4px -4px;"
+                  height="14.91px;"
+                  loading="lazy"
+                />
+              }
+            />
           </p>
-          <address>Mount St, 000, New York / NY - 00000.</address>
+          <p>
+            2021 FRN³ - Todos os direitos reservados :D <br />
+            CNPJ 123456789789456123 - Telefone: 123456789789456132
+          </p>
+          <address>Rua dos Nerds 404</address>
         </div>
       </div>
     </footer>

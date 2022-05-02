@@ -12,19 +12,22 @@
 
 // Tokens ///////////////////////////
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   // Colors /////////////////////////
 
   // Brand
-  --color-primary-0: #ebdcff;
-  --color-primary-1: #8d50fd;
-  --color-primary-2: #732fe2;
-  --color-primary-3: #5900c8;
+  --color-primary-0: #dcdceb;
+  --color-primary-1: #c5c5e7;
+  --color-primary-2: #adaee6;
+  --color-primary-3: #8082db;
+  --color-primary-4: #333056;
   --color-secondary-0: #ecf0ff;
   --color-secondary-1: #d8e2ff;
   --color-secondary-2: #00419e;
-  --color-secondary-3: #002c71;
-  --color-secondary-4: #001947;
+  --color-secondary-3: #e48fda;
+  --color-secondary-4: #de68d1;
   --color-neutral-0: #ffffff;
   --color-neutral-1: #f1f2f3;
   --color-neutral-2: #e3e6e8;
@@ -33,6 +36,11 @@
   --color-neutral-5: #74808b;
   --color-neutral-6: #5d666f;
   --color-neutral-7: #171a1c;
+  --color-theme-1: #8586db;
+  --color-theme-2: #000000;
+  --color-theme-3: #333056;
+  --color-theme-4: #8082db;
+  --color-theme-5: #de68d1;
 
   // State
   --color-success: #cee8de;
@@ -41,10 +49,11 @@
   --color-error: #fee1e1;
 
   // Customizable
-  --color-text: var(--color-neutral-7);
+  --color-text: var(--color-primary-4);
   --color-text-inverse: var(--color-neutral-0);
 
-  --bg-body: var(--color-neutral-0);
+  // --bg-body: var(--color-neutral-0);
+  --bg-body: var(--color-theme-3);
   --bg-primary-light: var(--color-primary-0);
   --bg-secondary-light: var(--color-secondary-0);
   --bg-neutral-light: var(--color-neutral-1);
@@ -54,7 +63,12 @@
   // Typography /////////////////////
 
   // Family
-  --sans-serif: "Lato", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  --sans-serif:
+    "Montserrat",
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    sans-serif;
 
   // Base
   --base-font-size: 16px;
@@ -63,20 +77,20 @@
   // Spacing ////////////////////////
 
   // Sizes
-  --space-0: .25rem;  //  4px
-  --space-1: .5rem;   //  8px
-  --space-2: .75rem;  // 12px
-  --space-3: 1rem;    // 16px
-  --space-4: 1.5rem;  // 24px
-  --space-5: 2rem;    // 32px
-  --space-6: 2.5rem;  // 40px
-  --space-7: 3rem;    // 48px
-  --space-8: 3.5rem;  // 56px
-  --space-9: 4rem;    // 64px
+  --space-0: 0.25rem; //  4px
+  --space-1: 0.5rem; //  8px
+  --space-2: 0.75rem; // 12px
+  --space-3: 1rem; // 16px
+  --space-4: 1.5rem; // 24px
+  --space-5: 2rem; // 32px
+  --space-6: 2.5rem; // 40px
+  --space-7: 3rem; // 48px
+  --space-8: 3.5rem; // 56px
+  --space-9: 4rem; // 64px
   --space-10: 4.5rem; // 72px
-  --space-11: 5rem;   // 80px
+  --space-11: 5rem; // 80px
   --space-12: 5.5rem; // 88px
-  --space-13: 6rem;   // 96px
+  --space-13: 6rem; // 96px
 
   // Paddings
   --page-padding-phone: var(--space-3);
@@ -84,7 +98,8 @@
   --page-padding-notebook: var(--space-5);
 
   // Target Size
-  --tap-min-size: 48px;
+  --tap-min-size: 50px;
+  --svg-min-size: 40px;
 
   // Box-Shadows ////////////////////
   --box-shadow: 0 1px 4px rgb(0 0 0 / 10%), 0 6px 8px rgb(0 0 0 / 10%);
@@ -96,10 +111,11 @@
   --border-radius-small: .125rem;
   --border-radius-regular: .25rem;
   --border-radius-pill: 100px;
+  --border-radius-input: 80px;
   --border-radius-circle: 100%;
 
   --border-radius-default: var(--border-radius-regular);
-  --border-radius-button: var(--border-radius-regular);
+  --border-radius-button: var(--border-radius-pill);
 
   // Width
   --border-width-0: 1px;

@@ -9,13 +9,12 @@
 
 .button[data-store-button], .link-button[data-store-button] {
   display: inline-flex;
+  column-gap: var(--space-2);
   align-items: center;
   justify-content: center;
-  min-height: var(--tap-min-size);
-  padding: var(--space-1)  var(--space-3);
-  font-weight: var(--text-weight-bold);
+  font-weight: 500;
   text-decoration: none;
-  column-gap: var(--space-2);
+  cursor: pointer;
   border: 0;
 
   &:disabled, &[data-button-disabled="true"] {
@@ -24,6 +23,9 @@
   }
 
   &[data-button-variant="primary"] {
+    min-height: var(--tap-min-size);
+    max-height: var(--tap-min-size);
+    padding: 0 20px;
     color: var(--color-text-inverse);
     background-color: var(--bg-secondary-default);
 
@@ -32,23 +34,29 @@
     &:active { background-color: var(--bg-secondary-pressed); }
 
     &[data-button-inverse] {
-      color: var(--color-text-display);
-      background-color: var(--bg-neutral-lightest);
+      color: var(--color-neutral-0);
+      background-color: var(--color-theme-2);
 
-      &:hover, &:focus { background-color: var(--color-secondary-0); }
+      &:hover, &:focus {
+        color: var(--color-theme-2);
+        background-color: var(--color-neutral-0);
+      }
 
       &:active { background-color: var(--color-secondary-1); }
     }
   }
 
   &[data-button-variant="secondary"] {
-    color: var(--color-text-display);
+    min-height: var(--tap-min-size);
+    padding: 13px 27px;
+    color: var(--color-theme-2);
     background-color: transparent;
-    border: var(--border-width-1) solid var(--bg-secondary-default);
+    border: var(--border-width-2) solid var(--color-theme-2);
 
     &:hover, &:focus {
       color: var(--color-text-inverse);
       background-color: var(--bg-secondary-default);
+      border: var(--border-width-2) solid var(--color-primary-4);
     }
 
     &:active {
@@ -69,21 +77,32 @@
   }
 
   &[data-button-variant="tertiary"] {
-    color: var(--color-link);
-    background-color: var(--bg-neutral-lightest);
+    &[data-button-signin-link] {
+      width: 40px;
+      height: 40px;
+      min-height: inherit;
+      padding: 0;
+      color: var(--color-neutral-0);
+      background-color: transparent;
+      border: 2px solid var(--color-neutral-0);
+      border-radius: var(--border-radius-circle);
+    }
 
-    &:hover, &:focus { background-color: var(--bg-secondary-light); }
+    &:hover, &:focus { text-decoration: underline; }
 
     &:active {
       color: var(--color-text-display);
-      background-color: var(--color-secondary-1);
     }
 
     &[data-button-inverse] {
-      color: var(--color-text-display);
-      background-color: var(--bg-neutral-lightest);
+      padding: 7px 13px;
+      color: var(--color-text-inverse);
+      border: var(--border-width-2) solid var(--color-neutral-0);
 
-      &:hover, &:focus { background-color: var(--color-secondary-0); }
+      &:hover, &:focus {
+        color: var(--color-text);
+        background-color: var(--color-neutral-0);
+      }
 
       &:active { background-color: var(--color-secondary-1); }
     }

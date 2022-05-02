@@ -3,19 +3,19 @@
   align-items: center;
   min-height: var(--space-7);
   padding-left: var(--space-3);
-  color: var(--color-secondary-4);
   font-size: var(--text-size-1);
+  color: var(--color-secondary-4);
   background-color: var(--bg-primary-light);
 
   [data-store-icon] {
-    margin: 0;
     padding-right: var(--space-1);
+    margin: 0;
   }
 
   [data-alert-content] {
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   span { font-weight: var(--text-weight-bold); }
@@ -24,8 +24,8 @@
     min-width: var(--space-8);
     min-height: var(--space-7);
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
 
     a {
       display: inline-flex;
@@ -33,8 +33,8 @@
       min-width: var(--space-7);
       min-height: var(--space-7);
       padding: 0 var(--space-1);
-      color: var(--color-secondary-4);
       font-weight: var(--text-weight-bold);
+      color: var(--color-secondary-4);
 
       &:visited { color: var(--color-secondary-4); }
     }

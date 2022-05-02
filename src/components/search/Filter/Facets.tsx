@@ -25,7 +25,7 @@ function Facets({
 }: FacetsProps) {
   return (
     <div className="filter" data-store-filter data-testid={testId}>
-      <h2 className="title-small">Filters</h2>
+      <h2 className="title-small">Filtros</h2>
       <Accordion expandedIndices={indicesExpanded} onChange={onAccordionChange}>
         {facets.map(({ label, values, key }, index) => (
           <AccordionItem

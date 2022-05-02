@@ -2,8 +2,8 @@
 
 .navbar {
   padding: 0;
-  border-bottom: var(--border-width-0) solid var(--color-neutral-2);
-  box-shadow: 0 var(--space-0) var(--space-3) var(--color-black-transparent-5);
+  background: rgb(34 31 65 / 30%);
+  backdrop-filter: blur(14px);
 
   [data-store-search-input] {
     flex: 1 0 100%;
@@ -26,16 +26,30 @@
     display: grid;
     grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr;
   }
-
-  @include media("<notebook") {
-    + .navlinks__list {
-      display: none;
-    }
-  }
 }
 
 .navbar__menu[data-store-button] {
-  @include media(">=notebook") { display: none; }
+  width: auto;
+  height: auto;
+  padding: 0;
+
+  span {
+    color: var(--color-neutral-0);
+
+    &::after {
+      margin-left: var(--space-1);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: var(--color-neutral-0);
+      letter-spacing: 0.01em;
+      content: "Menu";
+    }
+  }
+
+  @include media(">=notebook") {
+    display: none;
+  }
 }
 
 .navbar__buttons {
@@ -64,8 +78,10 @@
     transition: flex 0.3s ease-in;
 
     @include media("<notebook") {
-      display: inline-flex;
-      flex: 0;
+      display: flex;
+      flex: inherit;
+      align-items: center;
+      justify-content: center;
       order: 0;
       width: min-content;
 
@@ -74,7 +90,9 @@
         padding: 0;
         border-width: 0;
 
-        &:hover, &:focus, &:focus-visible &:hover:focus-visible {
+        &:hover,
+        &:focus,
+        &:focus-visible &:hover:focus-visible {
           border-width: 0;
           box-shadow: 0 0;
         }
@@ -85,8 +103,9 @@
         line-height: 0;
 
         svg {
-          width: var(--space-5);
-          height: var(--space-5);
+          width: 22px;
+          height: 22px;
+          color: var(--color-neutral-0);
         }
       }
     }
@@ -101,6 +120,9 @@
 
       [data-store-input] {
         width: calc(100% - var(--space-7));
+        margin-right: 7px;
+        border-color: var(--color-neutral-0);
+        border-width: 1px;
       }
 
       [data-store-icon] {
@@ -121,14 +143,19 @@
   overflow: hidden;
 
   @include media(">=notebook") {
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
+    padding: var(--space-4) 0;
+  }
+
+  @include media("<notebook") {
+    +.navlinks__list {
+      display: none;
+    }
   }
 }
 
 .navbar__logo {
-  width: 11rem;
-  height: 2.375rem;
+  // width: 11rem;
+  // height: 2.375rem;
   min-height: 2.375rem;
   padding: 0;
 
@@ -156,39 +183,87 @@
 
 .navlinks {
   .navlinks__signin {
+    display: flex;
+    align-items: center;
     padding-top: var(--space-2);
     margin-top: var(--space-2);
 
-    .signin-link[data-button-signin-link] {
-      width: fit-content;
-      padding-left: 0;
+    &::after {
+      margin-left: var(--space-1);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: var(--color-neutral-0);
+      letter-spacing: 0.01em;
+      content: "Minha Conta";
+    }
 
-      @include media(">=notebook") { display: none; }
+    .signin-link[data-button-signin-link] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      min-height: inherit;
+      padding: 0;
+
+      @include media(">=notebook") {
+        display: none;
+      }
     }
   }
 }
 
 .navlinks__list {
-  a {
-    display: block;
-    width: 100%;
-  }
+  padding: 0;
 
   @include media(">=notebook") {
+    background: rgb(34 31 65 / 40%);
+    backdrop-filter: blur(14px);
+
     ul {
       display: flex;
       column-gap: var(--space-3);
       padding-top: var(--space-1);
+
+      li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: stretch;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: var(--space-5);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
     a {
       width: auto;
-      padding: var(--space-0) 0;
+      padding: var(--space-2) 0;
     }
   }
 
-  @include media("<notebook") {
-    border-top: var(--border-width-0) solid var(--color-neutral-2);
-    border-bottom: var(--border-width-0) solid var(--color-neutral-2);
+  .grid-content {
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+
+    // font-size: var(--text-size-1);
+    font-size: 13px;
+    font-weight: var(--text-weight-black);
+    line-height: var(--space-3);
+    color: var(--color-neutral-0);
+
+    // text-transform: lowercase;
+
+    &:visited {
+      color: var(--color-neutral-0);
+    }
   }
 }

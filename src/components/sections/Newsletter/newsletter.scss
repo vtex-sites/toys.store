@@ -1,0 +1,111 @@
+[data-store-newsletter] {
+  padding-top: 55px;
+  padding-bottom: 55px;
+
+  @include media("<notebook") {
+    margin-right: var(--page-padding-notebook);
+    margin-left: var(--page-padding-notebook);
+  }
+
+  @include media(">=notebook") {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+[data-newsletter-form] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 320px;
+  padding: 64px 161px 74px;
+  background: linear-gradient(95.28deg, rgb(0 174 255 / 80%) 0%, #de68d1 59.98%, #f3d752 115.17%);
+  border-radius: 30px;
+
+  @include media("<notebook") {
+    max-height: inherit;
+    padding: 56px 26px 51px;
+  }
+}
+
+[data-newsletter-header] {
+  font-size: 27px;
+
+  // font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  color: #ffffff;
+  text-align: center;
+
+  @include media(">=notebook") {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+[data-newsletter-controls] {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 590px;
+  height: 50px;
+  margin: 36px 0 0;
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: var(--border-radius-pill);
+
+  @include media("<notebook") {
+    margin: 34px 0 0;
+  }
+
+  input {
+    flex-grow: 1;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    &:focus, &:active, &:-internal-autofill-selected, {
+      background-color: transparent;
+      outline: none;
+    }
+
+    &:-webkit-autofill {
+      background-clip: text;
+      -webkit-text-fill-color: #ffffff;
+    }
+  }
+
+  ::placeholder {
+    font-size: 13px;
+
+    // font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(255 255 255 / 50%);
+    text-transform: capitalize;
+  }
+
+  button {
+    min-height: var(--tap-min-size);
+    padding: 13px 27px;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-text);
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer;
+    background-color: var(--color-neutral-0);
+    border: 0;
+
+    &:hover {
+      color: var(--color-text-inverse);
+      background-color: var(--color-primary-4);
+    }
+  }
+}

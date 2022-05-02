@@ -5,43 +5,43 @@ import Accordion, { AccordionItem } from 'src/components/ui/Accordion'
 
 const links = [
   {
-    title: 'Our company',
+    title: 'Empresa',
     items: [
       {
-        href: '/',
-        name: 'About Us',
+        href: '/about',
+        name: 'Quem somos',
       },
       {
-        href: '/',
-        name: 'Our Blog',
+        href: '/about',
+        name: 'Blog',
       },
       {
-        href: '/',
-        name: 'Stores',
+        href: '/about',
+        name: 'Nossas lojas',
       },
       {
-        href: '/',
-        name: 'Work With Us',
+        href: '/about',
+        name: 'Trabalhe conosco',
       },
     ],
   },
   {
-    title: 'Orders & Purchases',
+    title: 'Minha conta',
     items: [
       {
-        href: '/',
-        name: 'Check Order Status',
+        href: '/about',
+        name: 'Meus pedidos',
       },
       {
-        href: '/',
-        name: 'Returns and Exchanges',
+        href: '/about',
+        name: 'Alterações de pedido',
       },
       {
-        href: '/',
-        name: 'Product Recall',
+        href: '/about',
+        name: 'Recall',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Gift Cards',
       },
     ],
@@ -50,32 +50,32 @@ const links = [
     title: 'Support & Services',
     items: [
       {
-        href: '/',
-        name: 'Support Center',
+        href: '/about',
+        name: 'Suporte',
       },
       {
-        href: '/',
-        name: 'Schedule a Service',
+        href: '/about',
+        name: 'Agende um serviço',
       },
       {
-        href: '/',
-        name: 'Contact Us',
+        href: '/about',
+        name: 'Contato',
       },
     ],
   },
   {
-    title: 'Partnerships',
+    title: 'Parcerias',
     items: [
       {
-        href: '/',
-        name: 'Affiliate Program',
+        href: '/about',
+        name: 'Afiliados',
       },
       {
-        href: '/',
-        name: 'Advertise with US',
+        href: '/about',
+        name: 'FRN no mundo',
       },
       {
-        href: '/',
+        href: '/about',
         name: 'Market Place',
       },
     ],

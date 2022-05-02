@@ -2,10 +2,18 @@ import { useSession } from '@faststore/sdk'
 import { graphql } from 'gatsby'
 import { GatsbySeo, JsonLd } from 'gatsby-plugin-next-seo'
 import React from 'react'
-import RenderCMS from 'src/components/RenderCMS'
 import { mark } from 'src/sdk/tests/mark'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
+import VirtualConsultant from 'src/components/sections/VirtualConsultant'
+import Hero from 'src/components/sections/Hero'
+import Skills from 'src/components/sections/Skills'
+import Newsletter from 'src/components/sections/Newsletter'
+import BannerText from 'src/components/sections/BannerText'
+import FavoriteProducts from 'src/components/sections/FavoriteProducts'
+import ProductShelf from 'src/components/sections/ProductShelf'
+import { ITEMS_PER_SECTION } from 'src/constants'
+import NewProducts from 'src/components/sections/NewProducts'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -15,25 +23,92 @@ export type Props = PageProps<HomePageQueryQuery>
  * Sometimes people delete content from the CMS on our test account, breaking our CI.
  * Since publishing new content depends on the CI, we get enter a deadlock. This prevents this deadlock
  */
-const fallbackContent = [
+
+const virtualConsultantJson = [
   {
-    data: {
-      title: 'New Products Available',
-      subtitle:
-        'At FastStore you can shop the best tech of 2022. Enjoy and get 10% off on your first purchase.',
-      linkText: 'See all',
-      link: '/',
-      imageSrc:
-        'https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg',
-      imageAlt: 'Quest 2 Controller on a table',
-    },
-    name: 'Hero',
+    title: 'Idade',
+    optionsValue: [
+      {
+        title: '0-2 anos',
+        values: '0-2 anos',
+        maps: 'specificationFilter_18',
+      },
+      {
+        title: '3-6 anos',
+        values: '3-6 anos',
+        maps: 'specificationFilter_18',
+      },
+      {
+        title: '7-10 anos',
+        values: '7-10 anos',
+        maps: 'specificationFilter_18',
+      },
+      {
+        title: '+11 anos',
+        values: '+11 anos',
+        maps: 'specificationFilter_18',
+      },
+    ],
   },
+  {
+    title: 'Gênero',
+    optionsValue: [
+      {
+        title: 'Menino',
+        values: 'Menino',
+        maps: 'specificationFilter_19',
+      },
+      {
+        title: 'Menina',
+        values: 'Menina',
+        maps: 'specificationFilter_19',
+      },
+      {
+        title: 'Meninx',
+        values: 'Meninx',
+        maps: 'specificationFilter_19',
+      },
+    ],
+  },
+  {
+    title: 'Faixa de preço',
+    optionsValue: [
+      {
+        title: 'Até R$99,99',
+        values: '0.1 TO 99.99',
+        maps: 'p',
+      },
+      {
+        title: 'De R$100,00 até R$299,99',
+        values: '100.00 TO 299.99',
+        maps: 'p',
+      },
+      {
+        title: 'De R$300,00 até R$999,99',
+        values: '300.00 TO 999.99',
+        maps: 'p',
+      },
+      {
+        title: 'Acima de R$1.000,00',
+        values: '1000 TO 999999.99',
+        maps: 'p',
+      },
+    ],
+  },
+]
+
+const skillsArray = [
+  'brinquedos',
+  'colecionáveis',
+  'bonencas',
+  'jogos',
+  'peças avulsas',
+  'kit praia',
 ]
 
 function Page(props: Props) {
   const {
-    data: { site, cmsHome },
+    data: { site },
     location: { pathname, host },
   } = props
 
@@ -70,8 +145,67 @@ function Page(props: Props) {
           },
         }}
       />
-      {/* CMS Sections */}
-      <RenderCMS sections={cmsHome?.sections ?? fallbackContent} />
+      <Hero
+        title="Já pensou em um brinquedo especial hoje?"
+        subtitle="Aqui você encontra os melhores presentes para agregar conhecimento, entretenimento e humor para o seu dia a dia ou naquela ocasião especial"
+        mainLink="/produtos/brinquedos"
+        mainLinkText="Conheça"
+        secondaryLinkText="Não sabe o que precisa?"
+        imageAlt="oi"
+        imageSrc="https://storeframework.vtexassets.com/arquivos/ids/190897/Photo.jpg"
+      />
+      <VirtualConsultant filterValues={virtualConsultantJson}>
+        <h3>Nós criamos um consultor virtual</h3>
+        <p>
+          Você conseguirá com poucos cliques, ter uma seleção incrível para
+          acertar no brinquedo ideal
+        </p>
+      </VirtualConsultant>
+      <NewProducts>
+        <ProductShelf
+          first={ITEMS_PER_SECTION}
+          sort="score_desc"
+          title="Novidades"
+        />
+      </NewProducts>
+      {/* <Carousel
+        controls="complete"
+        transition={{
+          duration: 400,
+          property: 'transform',
+        }}
+      >
+    </Carousel> */}
+
+      <BannerText
+        title="Venha ver nossas novidades"
+        caption="Produtos de pré-venda feitos para quem quer e entende o que precisa."
+        actionPath="/produtos/brinquedos"
+        actionLabel="Venha ver!"
+      />
+      <Skills skills={skillsArray}>
+        <h3>
+          Brincar também é um jeito de
+          <span className="lastWord"> aprender</span>
+        </h3>
+        <p>
+          Escolha brinquedos baseados nas habilidades que eles ajudam sua
+          criança a desenvolver!
+        </p>
+      </Skills>
+      <FavoriteProducts>
+        <ProductShelf
+          first={ITEMS_PER_SECTION}
+          sort="score_desc"
+          className="favorites"
+        />
+      </FavoriteProducts>
+      <Newsletter
+        title="Receba nossas novidades por e-mail, através de poucos cliques."
+        onSubmit={() => {
+          //
+        }}
+      />
     </>
   )
 }
