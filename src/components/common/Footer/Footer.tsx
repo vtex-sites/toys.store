@@ -90,7 +90,7 @@ function Footer() {
           component={
             <img
               // className="footer__logo"
-              src="/Logo.png"
+              src="/logo.png"
               alt="VTEX logo"
               width="150"
               // margin="-31px 0 0px -42px;"

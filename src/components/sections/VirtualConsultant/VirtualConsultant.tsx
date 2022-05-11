@@ -59,8 +59,10 @@ function VirtualConsultant(
     let urlFinal = ''
     const urlMapping = urlOption0.split('|')
 
-    const fixPath = '/brinquedos'
-    const fixMap = '?map=c'
+    const fixPath = '/produtos/brinquedos'
+    const fixMap =
+      'category-1=produtos&category-2=brinquedos&facets=category-1,category-2'
+
     let urlPathTemporary: string | undefined = ''
     let urlMapTemporary: string | undefined = ''
 
@@ -71,14 +73,16 @@ function VirtualConsultant(
 
       const ways = url.split('/')
 
-      urlPathTemporary = ways[0] ? `${urlPathTemporary}/${ways[0]}` : ''
+      urlPathTemporary = ways[0]
+        ? `${urlPathTemporary}${ways[1]}=${ways[0]}&`
+        : ''
       urlMapTemporary = ways[1] ? `${urlMapTemporary},${ways[1]}` : ''
     })
 
     if (urlPathTemporary && urlMapTemporary) {
-      urlFinal = `${fixPath}${urlPathTemporary}${fixMap}${urlMapTemporary}`
+      urlFinal = `${fixPath}?${urlPathTemporary}${fixMap}${urlMapTemporary}`
     } else {
-      urlFinal = `/brinquedos?map=c`
+      urlFinal = `${fixPath}?${fixMap}`
     }
 
     return urlFinal

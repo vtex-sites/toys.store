@@ -12,7 +12,7 @@ const links = [
         name: 'Quem somos',
       },
       {
-        href: '/about',
+        href: 'https://blog.frncomunicacao.com.br/',
         name: 'Blog',
       },
       {
@@ -47,18 +47,18 @@ const links = [
     ],
   },
   {
-    title: 'Support & Services',
+    title: 'Suporte & Serviços',
     items: [
       {
-        href: '/about',
+        href: 'https://frncomunicacao.com.br/contact',
         name: 'Suporte',
       },
       {
-        href: '/about',
+        href: 'https://frncomunicacao.com.br/contact',
         name: 'Agende um serviço',
       },
       {
-        href: '/about',
+        href: 'https://frncomunicacao.com.br/contact',
         name: 'Contato',
       },
     ],
@@ -67,15 +67,15 @@ const links = [
     title: 'Parcerias',
     items: [
       {
-        href: '/about',
+        href: 'https://frncomunicacao.com.br/',
         name: 'Afiliados',
       },
       {
-        href: '/about',
+        href: 'https://frncomunicacao.com.br/',
         name: 'FRN no mundo',
       },
       {
-        href: '/about',
+        href: 'https://frncomunicacao.com.br/',
         name: 'Market Place',
       },
     ],

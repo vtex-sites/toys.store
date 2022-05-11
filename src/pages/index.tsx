@@ -30,23 +30,23 @@ const virtualConsultantJson = [
     optionsValue: [
       {
         title: '0-2 anos',
-        values: '0-2 anos',
-        maps: 'specificationFilter_18',
+        values: '0-2-anos',
+        maps: 'idade',
       },
       {
         title: '3-6 anos',
-        values: '3-6 anos',
-        maps: 'specificationFilter_18',
+        values: '3-6-anos',
+        maps: 'idade',
       },
       {
         title: '7-10 anos',
-        values: '7-10 anos',
-        maps: 'specificationFilter_18',
+        values: '7-10-anos',
+        maps: 'idade',
       },
       {
         title: '+11 anos',
-        values: '+11 anos',
-        maps: 'specificationFilter_18',
+        values: '-11-anos',
+        maps: 'idade',
       },
     ],
   },
@@ -55,18 +55,18 @@ const virtualConsultantJson = [
     optionsValue: [
       {
         title: 'Menino',
-        values: 'Menino',
-        maps: 'specificationFilter_19',
+        values: 'menino',
+        maps: 'genero',
       },
       {
         title: 'Menina',
-        values: 'Menina',
-        maps: 'specificationFilter_19',
+        values: 'menina',
+        maps: 'genero',
       },
       {
         title: 'Meninx',
-        values: 'Meninx',
-        maps: 'specificationFilter_19',
+        values: 'meninx',
+        maps: 'genero',
       },
     ],
   },
@@ -75,23 +75,23 @@ const virtualConsultantJson = [
     optionsValue: [
       {
         title: 'Até R$99,99',
-        values: '0.1 TO 99.99',
-        maps: 'p',
+        values: 'ate-9999',
+        maps: 'faixa-de-preco',
       },
       {
         title: 'De R$100,00 até R$299,99',
-        values: '100.00 TO 299.99',
-        maps: 'p',
+        values: 'de-r-10000-ate-r-29999',
+        maps: 'faixa-de-preco',
       },
       {
         title: 'De R$300,00 até R$999,99',
-        values: '300.00 TO 999.99',
-        maps: 'p',
+        values: 'de-r-30000-ate-r-99999',
+        maps: 'faixa-de-preco',
       },
       {
         title: 'Acima de R$1.000,00',
-        values: '1000 TO 999999.99',
-        maps: 'p',
+        values: 'acima-de-r-1-00000',
+        maps: 'faixa-de-preco',
       },
     ],
   },

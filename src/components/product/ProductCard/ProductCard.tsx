@@ -54,16 +54,18 @@ function ProductCard({
       data-card-out-of-stock={outOfStock}
       {...otherProps}
     >
-      <UICardImage>
-        <Image
-          src={img.url}
-          alt={img.alternateName}
-          width={360}
-          height={360 / aspectRatio}
-          sizes="(max-width: 768px) 25vw, 30vw"
-          loading="lazy"
-        />
-      </UICardImage>
+      <Link {...linkProps} title={name}>
+        <UICardImage>
+          <Image
+            src={img.url}
+            alt={img.alternateName}
+            width={360}
+            height={360 / aspectRatio}
+            sizes="(max-width: 768px) 25vw, 30vw"
+            loading="lazy"
+          />
+        </UICardImage>
+      </Link>
       <UICardContent>
         {outOfStock ? (
           <Badge small variant="neutral">
